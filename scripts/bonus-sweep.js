@@ -32,6 +32,7 @@ function parse(argv) {
 			case "--limit": o.limit = Number(next()); break;
 			case "--listen-ms": o.listenMs = Number(next()); break;
 			case "--no-adaptive": o.adaptiveStop = false; break;
+			case "--adaptive": o.adaptiveStop = true; break;
 			case "--idle-margin": o.idleMargin = Number(next()); break;
 			case "--idle-floor-ms": o.idleFloorMs = Number(next()); break;
 			case "--min-drops": o.minDrops = Number(next()); break;
@@ -54,8 +55,8 @@ uso: ./ProTanki.exe scripts/bonus-sweep.js [opções]   (contas com passe)
   --accounts c2,c3        só essas contas (por label); padrão: todas do arquivo
   --maps a,b,/regex/      só esses mapas (padrão: todos habilitados com DM)
   --limit N               no máximo N mapas
-  --listen-ms MS          teto duro de escuta por mapa (padrão: ${DEFAULTS.listenMs}; limitado ao kick de 5min)
-  --no-adaptive           desliga a parada por teto (ouve sempre --listen-ms)
+  --listen-ms MS          escuta por mapa (padrão: ${DEFAULTS.listenMs}; as quedas acontecem entre 10 e 80 s)
+  --adaptive              liga a parada por teto (NÃO recomendado: perdeu pontos; ver README)
   --idle-margin F         silêncio exigido = maior intervalo entre quedas × (1+F) (padrão: ${DEFAULTS.idleMargin})
   --idle-floor-ms MS      silêncio mínimo para declarar teto (padrão: ${DEFAULTS.idleFloorMs})
   --min-drops N           só declara teto depois de N quedas (padrão: ${DEFAULTS.minDrops})

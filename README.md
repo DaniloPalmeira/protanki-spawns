@@ -39,21 +39,26 @@ label.
 Uma sessão por mapa, só DM. A batalha é privada, 1 vaga, pró, com todos os bônus ligados e
 **Caixa de bônus em cronômetro preciso** (`esportDropTiming`). O bot entra sem spawnar e escuta.
 
-**Parada por teto.** O bot nunca pega caixa, então quando todas as regiões do mapa estão cheias
-o servidor para de soltar: esse é o teto, a capacidade de caixas do mapa. O sinal é um silêncio
-maior que o **maior intervalo observado entre duas quedas** com margem (padrão: o dobro, nunca
-menos que 20 s), depois de pelo menos 3 quedas. Medido: intervalos de 2 a 10 s, teto em 1 a
-1,5 min (canal 29 caixas, courage 9). Teto duro de 4 min 50 s (o servidor expulsa quem não
-spawnou em 5 min). `capture.stopReason` diz como a sessão acabou (`teto`, `tempo`, `kick`) e
-`capture.capacity` traz a capacidade quando foi por teto; `capture.timeline` tem o instante de
-cada queda em segundos.
+**Escuta fixa de 120 s.** Medido em 91 mapas e confirmado numa recaptura: cada ponto sorteia o
+instante da sua caixa **uniformemente entre 10 e 80 s** depois do início da batalha, em segundo
+inteiro, e nada cai depois de 80 s (0 de 1415 quedas). A primeira caixa chega em média aos 15 s
+(mais cedo em mapa com muitos pontos, pois é o mínimo de N sorteios) e a última encosta nos 80 s
+em mapa grande. 120 s cobre a janela com folga; o kick de inatividade é aos 5 min.
+
+Uma parada "por teto" (silêncio maior que o dobro do maior intervalo visto) foi testada e
+**descartada**: com o sorteio uniforme e poucos pontos é comum um intervalo de 20 a 30 s depois
+de quedas juntas, e ela cortou factory 6→10, pingpong 6→8 e rift 3→8. Continua disponível em
+`--adaptive` só para experimento. `capture.timeline` tem o instante de cada queda em segundos e
+`capture.capacity` o total de pontos.
 
 **Cada queda é um ponto de spawn.** No cronômetro preciso cada ponto solta uma caixa, e a caixa
 fica no chão até alguém pegar; como ninguém pega, a sessão única mostra cada ponto exatamente
-uma vez e o teto é o total de pontos do mapa. Por isso `points` guarda toda queda sem agrupar
-nem deduplicar: duas caixas a 300 unidades uma da outra são dois pontos, não uma "zona". Zonas
-de gold (`SpawnBonusRegion`) são a sirene do gold e só aparecem em batalha com jogadores
-ativos; nenhuma foi vista nesta captura.
+uma vez e o total de quedas é o total de pontos do mapa. Por isso `points` guarda toda queda
+sem agrupar nem deduplicar: duas caixas a 300 unidades uma da outra são dois pontos, não uma
+"zona". A **coordenada** de cada queda, porém, é aleatória dentro da região do ponto: entre
+duas sessões do mesmo mapa nenhuma coordenada coincidiu, e o ponto correspondente ficou a 117 a
+564 unidades. Uma sessão dá uma amostra por região. Zonas de gold (`SpawnBonusRegion`) são a
+sirene do gold e só aparecem em batalha com jogadores ativos; nenhuma foi vista.
 
 Conta sem passe é descartada: sem passe a batalha sai pública e outro jogador poderia pegar
 caixa no meio da coleta.
