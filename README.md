@@ -95,4 +95,11 @@ radianos normalizado para (-π, π].
 - Depois de entrar, o `InitBattlefieldModel` confere `map_id`; mapa diferente aborta a sessão.
 - Nada de rajada: cada `EnterBattle` só sai depois que o servidor confirmou a volta ao lobby.
   Rajada derruba o socket sem aviso.
-- Criar batalha tem limite de 3 a cada 5 min por conta; entrar e sair não tem.
+- Limite de criação (medido em 04/10/2026, 48 criações): **no máximo 3 batalhas vivas por
+  conta**. Uma batalha vazia some ~6 a 7 min depois que o último jogador sai; a 4ª criação
+  enquanto as 3 existem não recebe `CreateBattleResponse` nenhum. Não é "3 a cada 5 min": 3
+  criações em 4 min passaram. O portão espera a mais antiga expirar, e é isso que dita o ritmo
+  da captura de suprimentos (~3 mapas a cada 9 min por conta). Entrar e sair não tem limite.
+- Depois de várias desconexões abruptas em poucos minutos (matar o processo, logins em série),
+  o servidor passa ~10 min aceitando o TCP e fechando sem mandar as chaves. O login tem retry
+  espaçado por isso.
