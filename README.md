@@ -37,8 +37,16 @@ label.
 ## Suprimentos (`scripts/bonus-sweep.js`)
 
 Uma sessão por mapa, só DM. A batalha é privada, 1 vaga, pró, com todos os bônus ligados e
-**Caixa de bônus em cronômetro preciso** (`esportDropTiming`): a caixa cai a cada ~7 s. O bot
-entra sem spawnar e escuta por 4 min 50 s (o servidor expulsa quem não spawnou em 5 min).
+**Caixa de bônus em cronômetro preciso** (`esportDropTiming`). O bot entra sem spawnar e escuta.
+
+**Parada por teto.** O bot nunca pega caixa, então quando todas as regiões do mapa estão cheias
+o servidor para de soltar: esse é o teto, a capacidade de caixas do mapa. O sinal é um silêncio
+maior que o **maior intervalo observado entre duas quedas** com margem (padrão: o dobro, nunca
+menos que 20 s), depois de pelo menos 3 quedas. Medido: intervalos de 2 a 10 s, teto em 1 a
+1,5 min (canal 29 caixas, courage 9). Teto duro de 4 min 50 s (o servidor expulsa quem não
+spawnou em 5 min). `capture.stopReason` diz como a sessão acabou (`teto`, `tempo`, `kick`) e
+`capture.capacity` traz a capacidade quando foi por teto; `capture.timeline` tem o instante de
+cada queda em segundos.
 
 A posição da queda é aleatória dentro de uma região desenhada no editor de mapa, então o que se
 guarda é o **tipo**, a **bbox** por tipo, as **zonas** (bbox agrupadas por proximidade) e uma

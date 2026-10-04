@@ -31,6 +31,10 @@ function parse(argv) {
 			case "--maps": o.maps = next().split(",").map((s) => s.trim()).filter(Boolean); break;
 			case "--limit": o.limit = Number(next()); break;
 			case "--listen-ms": o.listenMs = Number(next()); break;
+			case "--no-adaptive": o.adaptiveStop = false; break;
+			case "--idle-margin": o.idleMargin = Number(next()); break;
+			case "--idle-floor-ms": o.idleFloorMs = Number(next()); break;
+			case "--min-drops": o.minDrops = Number(next()); break;
 			case "--mode": o.mode = next().toUpperCase(); break;
 			case "--redo": o.redo = true; break;
 			case "--dry-run": o.dryRun = true; break;
@@ -50,7 +54,11 @@ uso: ./ProTanki.exe scripts/bonus-sweep.js [opções]   (contas com passe)
   --accounts c2,c3        só essas contas (por label); padrão: todas do arquivo
   --maps a,b,/regex/      só esses mapas (padrão: todos habilitados com DM)
   --limit N               no máximo N mapas
-  --listen-ms MS          escuta por mapa (padrão: ${DEFAULTS.listenMs}; limitada ao kick de 5min)
+  --listen-ms MS          teto duro de escuta por mapa (padrão: ${DEFAULTS.listenMs}; limitado ao kick de 5min)
+  --no-adaptive           desliga a parada por teto (ouve sempre --listen-ms)
+  --idle-margin F         silêncio exigido = maior intervalo entre quedas × (1+F) (padrão: ${DEFAULTS.idleMargin})
+  --idle-floor-ms MS      silêncio mínimo para declarar teto (padrão: ${DEFAULTS.idleFloorMs})
+  --min-drops N           só declara teto depois de N quedas (padrão: ${DEFAULTS.minDrops})
   --mode DM               modo da batalha (padrão: ${DEFAULTS.mode})
   --redo                  refaz mapas já concluídos (apaga o bônus anterior do mapa)
   --dry-run               só imprime a fila e quem alcança cada mapa
