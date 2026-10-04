@@ -2,126 +2,6 @@
 	"mapId": "map_wave",
 	"modes": {},
 	"bonus": {
-		"types": {
-			"nitro": 2,
-			"armorup": 1,
-			"damageup": 1
-		},
-		"region": {
-			"nitro": {
-				"minX": -3278,
-				"maxX": 8423,
-				"minY": 1402,
-				"maxY": 1665,
-				"minZ": 737,
-				"maxZ": 898
-			},
-			"armorup": {
-				"minX": 1858,
-				"maxX": 1858,
-				"minY": 2790,
-				"maxY": 2790,
-				"minZ": 937,
-				"maxZ": 937
-			},
-			"damageup": {
-				"minX": 2095,
-				"maxX": 2095,
-				"minY": -166,
-				"maxY": -166,
-				"minZ": 1025,
-				"maxZ": 1025
-			}
-		},
-		"zones": {
-			"nitro": [
-				{
-					"minX": 8423,
-					"maxX": 8423,
-					"minY": 1402,
-					"maxY": 1402,
-					"minZ": 737,
-					"maxZ": 737,
-					"samples": 1,
-					"cx": 8423,
-					"cy": 1402,
-					"cz": 737
-				},
-				{
-					"minX": -3278,
-					"maxX": -3278,
-					"minY": 1665,
-					"maxY": 1665,
-					"minZ": 898,
-					"maxZ": 898,
-					"samples": 1,
-					"cx": -3278,
-					"cy": 1665,
-					"cz": 898
-				}
-			],
-			"armorup": [
-				{
-					"minX": 1858,
-					"maxX": 1858,
-					"minY": 2790,
-					"maxY": 2790,
-					"minZ": 937,
-					"maxZ": 937,
-					"samples": 1,
-					"cx": 1858,
-					"cy": 2790,
-					"cz": 937
-				}
-			],
-			"damageup": [
-				{
-					"minX": 2095,
-					"maxX": 2095,
-					"minY": -166,
-					"maxY": -166,
-					"minZ": 1025,
-					"maxZ": 1025,
-					"samples": 1,
-					"cx": 2095,
-					"cy": -166,
-					"cz": 1025
-				}
-			]
-		},
-		"drops": {
-			"nitro": [
-				{
-					"x": 8423,
-					"y": 1402,
-					"z": 737,
-					"count": 1
-				},
-				{
-					"x": -3278,
-					"y": 1665,
-					"z": 898,
-					"count": 1
-				}
-			],
-			"armorup": [
-				{
-					"x": 1858,
-					"y": 2790,
-					"z": 937,
-					"count": 1
-				}
-			],
-			"damageup": [
-				{
-					"x": 2095,
-					"y": -166,
-					"z": 1025,
-					"count": 1
-				}
-			]
-		},
-		"goldRegions": [],
 		"capture": {
 			"account": "Danlino",
 			"battleId": "fa2d928e54c05508",
@@ -147,7 +27,41 @@
 				43.7,
 				48.7
 			]
-		}
+		},
+		"types": {
+			"nitro": 2,
+			"armorup": 1,
+			"damageup": 1
+		},
+		"points": {
+			"nitro": [
+				{
+					"x": 8423,
+					"y": 1402,
+					"z": 737
+				},
+				{
+					"x": -3278,
+					"y": 1665,
+					"z": 898
+				}
+			],
+			"armorup": [
+				{
+					"x": 1858,
+					"y": 2790,
+					"z": 937
+				}
+			],
+			"damageup": [
+				{
+					"x": 2095,
+					"y": -166,
+					"z": 1025
+				}
+			]
+		},
+		"goldRegions": []
 	},
-	"updatedAt": "2026-10-04T07:44:14.049Z"
+	"updatedAt": "2026-10-04T15:23:21.196Z"
 }

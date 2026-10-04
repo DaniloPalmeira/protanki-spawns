@@ -48,9 +48,12 @@ spawnou em 5 min). `capture.stopReason` diz como a sessão acabou (`teto`, `temp
 `capture.capacity` traz a capacidade quando foi por teto; `capture.timeline` tem o instante de
 cada queda em segundos.
 
-A posição da queda é aleatória dentro de uma região desenhada no editor de mapa, então o que se
-guarda é o **tipo**, a **bbox** por tipo, as **zonas** (bbox agrupadas por proximidade) e uma
-amostra das posições. Zonas de gold (`SpawnBonusRegion`) são fixas e vêm inteiras.
+**Cada queda é um ponto de spawn.** No cronômetro preciso cada ponto solta uma caixa, e a caixa
+fica no chão até alguém pegar; como ninguém pega, a sessão única mostra cada ponto exatamente
+uma vez e o teto é o total de pontos do mapa. Por isso `points` guarda toda queda sem agrupar
+nem deduplicar: duas caixas a 300 unidades uma da outra são dois pontos, não uma "zona". Zonas
+de gold (`SpawnBonusRegion`) são a sirene do gold e só aparecem em batalha com jogadores
+ativos; nenhuma foi vista nesta captura.
 
 Conta sem passe é descartada: sem passe a batalha sai pública e outro jogador poderia pegar
 caixa no meio da coleta.
@@ -72,11 +75,9 @@ Um arquivo por mapa em `spawns/<map_id>.json` (versionado):
   "mapId": "map_sandbox",
   "modes": { "DM": { "NONE": [ { "x", "y", "z", "yaw", "count" } ] } },
   "bonus": {
-    "capture": { "account", "battleId", "startedAt", "listenMs", "drops", "finishedAt" },
-    "types": { "nitro": 12, "medkit": 9 },
-    "region": { "nitro": { "minX", "maxX", "minY", "maxY", "minZ", "maxZ" } },
-    "zones": { "nitro": [ { "minX", "maxX", "minY", "maxY", "minZ", "maxZ", "cx", "cy", "cz", "samples" } ] },
-    "drops": { "nitro": [ { "x", "y", "z", "count" } ] },
+    "capture": { "account", "battleId", "startedAt", "finishedAt", "stopReason", "capacity", "drops", "maxGapMs", "timeline" },
+    "types": { "nitro": 4, "medkit": 3 },                 // pontos de spawn por tipo
+    "points": { "nitro": [ { "x", "y", "z" } ] },         // um ponto por caixa que caiu
     "goldRegions": [ { "x", "y", "z", "yaw", "bonusType", "count" } ]
   },
   "ctf": { "variants": [ { "red", "blue", "count" } ] },

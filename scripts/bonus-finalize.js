@@ -2,13 +2,18 @@
 "use strict";
 
 /**
- * Fechamento da captura de suprimentos: reclassifica a razão de parada com a MESMA regra de
- * silêncio da varredura, mas sem o piso de 3 quedas.
+ * Fechamento da captura de suprimentos. Idempotente. Duas passagens:
  *
- * Por quê: a varredura só declara teto depois de 3 quedas (para não fechar cedo). Um mapa com
- * capacidade 1 ou 2 fica então até o tempo esgotar, marcado como "tempo" — mas se o silêncio
- * final for maior que o dobro do maior intervalo entre quedas (mínimo 20 s), as caixas pararam
- * de cair e isso É o teto. map_island: quedas aos 15,9 s e 56,9 s, depois 233 s de silêncio.
+ *  1. Reclassifica a razão de parada com a MESMA regra de silêncio da varredura, sem o piso de
+ *     3 quedas. A varredura só declara teto depois de 3 quedas (para não fechar cedo); um mapa
+ *     com capacidade 1 ou 2 fica até o tempo esgotar, marcado "tempo" — mas se o silêncio final
+ *     for maior que o dobro do maior intervalo entre quedas (mínimo 20 s), as caixas pararam de
+ *     cair e isso É o teto. map_island: quedas aos 15,9 s e 56,9 s, depois 233 s de silêncio.
+ *
+ *  2. Migra o formato antigo (`drops` com count + `zones`/`region` agrupados) para `points`:
+ *     cada queda vira um ponto, sem fundir. No sport cada ponto solta uma caixa e ela fica no
+ *     chão, então duas quedas perto são dois pontos — o agrupamento por 500 unidades fundia
+ *     pontos reais (cologne, esplanade, industrial_zone, montecarlo).
  *
  *   node scripts/bonus-finalize.js            aplica e imprime o resumo
  *   node scripts/bonus-finalize.js --dry-run  só imprime o que mudaria
@@ -37,23 +42,50 @@ for (const f of files) {
 	} catch {
 		continue;
 	}
-	const c = d.bonus?.capture;
+	const b = d.bonus;
+	const c = b?.capture;
 	if (!c || !c.finishedAt || !c.stopReason) continue; // sessão ainda em andamento
 
-	let novo = null;
+	const notas = [];
+	let mudou = false;
+
+	// 1. razão de parada
 	if (c.stopReason === "tempo" && c.drops > 0 && c.idleMs != null) {
 		const exigido = Math.max((c.maxGapMs || 0) * (1 + IDLE_MARGIN), IDLE_FLOOR_MS);
-		if (c.idleMs > exigido) novo = { stopReason: "teto", capacity: c.drops, reclassified: `tempo→teto: ${Math.round(c.idleMs / 1000)}s de silêncio > ${Math.round(exigido / 1000)}s exigidos` };
+		if (c.idleMs > exigido) {
+			notas.push(`tempo→teto: ${Math.round(c.idleMs / 1000)}s de silêncio > ${Math.round(exigido / 1000)}s exigidos`);
+			if (!dry) Object.assign(c, { stopReason: "teto", capacity: c.drops });
+			mudou = true;
+		}
 	}
-	if (novo) {
+
+	// 2. formato: drops/zones/region → points
+	if (b.drops || b.zones || b.region) {
+		const points = {};
+		let n = 0;
+		for (const [tipo, lista] of Object.entries(b.drops || {})) {
+			points[tipo] = [];
+			for (const p of lista) for (let i = 0; i < (p.count || 1); i++) points[tipo].push({ x: p.x, y: p.y, z: p.z });
+			n += points[tipo].length;
+		}
+		notas.push(`drops/zones/region → points (${n} pontos)`);
+		if (!dry) {
+			const { capture, types, goldRegions } = b;
+			d.bonus = { capture, types: types || {}, points, goldRegions: goldRegions || [] };
+		}
+		mudou = true;
+	}
+
+	if (mudou) {
 		mudados++;
 		if (!dry) {
-			Object.assign(c, novo);
 			d.updatedAt = new Date().toISOString();
 			fs.writeFileSync(file, JSON.stringify(d, null, "\t") + "\n");
 		}
 	}
-	rows.push({ mapId: d.mapId, drops: c.drops, stopReason: novo?.stopReason ?? c.stopReason, capacity: novo?.capacity ?? c.capacity, gold: (d.bonus.goldRegions || []).length, listen: Math.round((c.elapsedMs || 0) / 1000), types: Object.keys(d.bonus.types || {}).length, account: c.account, note: novo?.reclassified || "" });
+	const bb = d.bonus;
+	const pontos = Object.values(bb.points || bb.drops || {}).reduce((a, l) => a + l.length, 0);
+	rows.push({ mapId: d.mapId, drops: c.drops, pontos, stopReason: c.stopReason, capacity: c.capacity, gold: (bb.goldRegions || []).length, listen: Math.round((c.elapsedMs || 0) / 1000), types: Object.keys(bb.types || {}).length, account: c.account, note: notas.join("; ") });
 }
 
 console.log(`${rows.length} mapas com captura de suprimentos; ${mudados} reclassificado(s)${dry ? " (dry-run, nada gravado)" : ""}`);
@@ -64,7 +96,10 @@ if (caps.length) console.log(`capacidade: min ${Math.min(...caps)}, max ${Math.m
 const semGold = rows.filter((r) => !r.gold).length;
 console.log(`mapas sem zona de gold vista: ${semGold} de ${rows.length}`);
 console.log("");
-console.log("mapa                      quedas cap  razão  tipos gold escuta conta");
+const divergentes = rows.filter((r) => r.pontos !== r.drops);
+if (divergentes.length) console.log(`ATENÇÃO: pontos != quedas em ${divergentes.map((r) => r.mapId).join(", ")}`);
+console.log("");
+console.log("mapa                      pontos cap  razão  tipos gold escuta conta");
 for (const r of rows) {
-	console.log(`${r.mapId.padEnd(25)} ${String(r.drops).padStart(6)} ${String(r.capacity ?? "-").padStart(4)}  ${r.stopReason.padEnd(6)} ${String(r.types).padStart(5)} ${String(r.gold).padStart(4)} ${String(r.listen + "s").padStart(6)} ${r.account || ""}${r.note ? "  ← " + r.note : ""}`);
+	console.log(`${r.mapId.padEnd(25)} ${String(r.pontos).padStart(6)} ${String(r.capacity ?? "-").padStart(4)}  ${r.stopReason.padEnd(6)} ${String(r.types).padStart(5)} ${String(r.gold).padStart(4)} ${String(r.listen + "s").padStart(6)} ${r.account || ""}${r.note ? "  ← " + r.note : ""}`);
 }

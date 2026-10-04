@@ -45,16 +45,12 @@ function toViz(d, id) {
 	if (d.cp?.points?.length) out.cp = d.cp.points.map((p) => [ri(p.x), ri(p.y), p.name || "?"]);
 
 	if (d.bonus) {
+		// um ponto de spawn de suprimento por caixa que caiu (formato antigo `drops` aceito)
 		const bonus = {};
-		for (const [tipo, list] of Object.entries(d.bonus.drops || {})) {
+		for (const [tipo, list] of Object.entries(d.bonus.points || d.bonus.drops || {})) {
 			if (Array.isArray(list) && list.length) bonus[tipo] = list.map((p) => [ri(p.x), ri(p.y)]);
 		}
 		if (Object.keys(bonus).length) out.bonus = bonus;
-		const zones = {};
-		for (const [tipo, list] of Object.entries(d.bonus.zones || {})) {
-			if (Array.isArray(list) && list.length) zones[tipo] = list.map((z) => [ri(z.minX), ri(z.minY), ri(z.maxX), ri(z.maxY), z.samples]);
-		}
-		if (Object.keys(zones).length) out.zones = zones;
 		if (Array.isArray(d.bonus.goldRegions) && d.bonus.goldRegions.length) out.gold = d.bonus.goldRegions.map((p) => [ri(p.x), ri(p.y)]);
 		if (d.bonus.capture) out.capture = { account: d.bonus.capture.account, drops: d.bonus.capture.drops, listenMs: d.bonus.capture.listenMs, finishedAt: d.bonus.capture.finishedAt };
 	}
@@ -70,7 +66,7 @@ function buildData() {
 		try { d = JSON.parse(fs.readFileSync(path.join(SPAWNS_DIR, f), "utf8")); } catch { continue; }
 		const id = d.mapId || f.replace(/\.json$/, "");
 		const temSpawn = d.modes && Object.keys(d.modes).length;
-		const temBonus = d.bonus && (Object.keys(d.bonus.drops || {}).length || (d.bonus.goldRegions || []).length);
+		const temBonus = d.bonus && (Object.keys(d.bonus.points || d.bonus.drops || {}).length || (d.bonus.goldRegions || []).length);
 		if (!temSpawn && !temBonus) continue;
 		data[id] = toViz(d, id);
 	}

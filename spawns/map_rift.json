@@ -2,95 +2,6 @@
 	"mapId": "map_rift",
 	"modes": {},
 	"bonus": {
-		"types": {
-			"nitro": 2,
-			"damageup": 1
-		},
-		"region": {
-			"nitro": {
-				"minX": -836,
-				"maxX": 2201,
-				"minY": -230,
-				"maxY": -92,
-				"minZ": 616,
-				"maxZ": 778
-			},
-			"damageup": {
-				"minX": -2697,
-				"maxX": -2697,
-				"minY": 4483,
-				"maxY": 4483,
-				"minZ": 981,
-				"maxZ": 981
-			}
-		},
-		"zones": {
-			"nitro": [
-				{
-					"minX": -836,
-					"maxX": -836,
-					"minY": -92,
-					"maxY": -92,
-					"minZ": 778,
-					"maxZ": 778,
-					"samples": 1,
-					"cx": -836,
-					"cy": -92,
-					"cz": 778
-				},
-				{
-					"minX": 2201,
-					"maxX": 2201,
-					"minY": -230,
-					"maxY": -230,
-					"minZ": 616,
-					"maxZ": 616,
-					"samples": 1,
-					"cx": 2201,
-					"cy": -230,
-					"cz": 616
-				}
-			],
-			"damageup": [
-				{
-					"minX": -2697,
-					"maxX": -2697,
-					"minY": 4483,
-					"maxY": 4483,
-					"minZ": 981,
-					"maxZ": 981,
-					"samples": 1,
-					"cx": -2697,
-					"cy": 4483,
-					"cz": 981
-				}
-			]
-		},
-		"drops": {
-			"nitro": [
-				{
-					"x": -836,
-					"y": -92,
-					"z": 778,
-					"count": 1
-				},
-				{
-					"x": 2201,
-					"y": -230,
-					"z": 616,
-					"count": 1
-				}
-			],
-			"damageup": [
-				{
-					"x": -2697,
-					"y": 4483,
-					"z": 981,
-					"count": 1
-				}
-			]
-		},
-		"goldRegions": [],
 		"capture": {
 			"account": "Danlino",
 			"battleId": "43dc1aaf7f4c5741",
@@ -115,7 +26,33 @@
 				27.2,
 				36.2
 			]
-		}
+		},
+		"types": {
+			"nitro": 2,
+			"damageup": 1
+		},
+		"points": {
+			"nitro": [
+				{
+					"x": -836,
+					"y": -92,
+					"z": 778
+				},
+				{
+					"x": 2201,
+					"y": -230,
+					"z": 616
+				}
+			],
+			"damageup": [
+				{
+					"x": -2697,
+					"y": 4483,
+					"z": 981
+				}
+			]
+		},
+		"goldRegions": []
 	},
-	"updatedAt": "2026-10-04T09:36:37.329Z"
+	"updatedAt": "2026-10-04T15:23:21.186Z"
 }

@@ -2,162 +2,6 @@
 	"mapId": "map_farm",
 	"modes": {},
 	"bonus": {
-		"types": {
-			"armorup": 2,
-			"medkit": 2,
-			"damageup": 2
-		},
-		"region": {
-			"armorup": {
-				"minX": -2551,
-				"maxX": -2273,
-				"minY": -2862,
-				"maxY": 1748,
-				"minZ": 702,
-				"maxZ": 877
-			},
-			"medkit": {
-				"minX": 121,
-				"maxX": 166,
-				"minY": -3909,
-				"maxY": 2973,
-				"minZ": 607,
-				"maxZ": 899
-			},
-			"damageup": {
-				"minX": 2756,
-				"maxX": 2992,
-				"minY": -1740,
-				"maxY": 699,
-				"minZ": 717,
-				"maxZ": 824
-			}
-		},
-		"zones": {
-			"armorup": [
-				{
-					"minX": -2551,
-					"maxX": -2551,
-					"minY": 1748,
-					"maxY": 1748,
-					"minZ": 702,
-					"maxZ": 702,
-					"samples": 1,
-					"cx": -2551,
-					"cy": 1748,
-					"cz": 702
-				},
-				{
-					"minX": -2273,
-					"maxX": -2273,
-					"minY": -2862,
-					"maxY": -2862,
-					"minZ": 877,
-					"maxZ": 877,
-					"samples": 1,
-					"cx": -2273,
-					"cy": -2862,
-					"cz": 877
-				}
-			],
-			"medkit": [
-				{
-					"minX": 166,
-					"maxX": 166,
-					"minY": 2973,
-					"maxY": 2973,
-					"minZ": 899,
-					"maxZ": 899,
-					"samples": 1,
-					"cx": 166,
-					"cy": 2973,
-					"cz": 899
-				},
-				{
-					"minX": 121,
-					"maxX": 121,
-					"minY": -3909,
-					"maxY": -3909,
-					"minZ": 607,
-					"maxZ": 607,
-					"samples": 1,
-					"cx": 121,
-					"cy": -3909,
-					"cz": 607
-				}
-			],
-			"damageup": [
-				{
-					"minX": 2992,
-					"maxX": 2992,
-					"minY": 699,
-					"maxY": 699,
-					"minZ": 717,
-					"maxZ": 717,
-					"samples": 1,
-					"cx": 2992,
-					"cy": 699,
-					"cz": 717
-				},
-				{
-					"minX": 2756,
-					"maxX": 2756,
-					"minY": -1740,
-					"maxY": -1740,
-					"minZ": 824,
-					"maxZ": 824,
-					"samples": 1,
-					"cx": 2756,
-					"cy": -1740,
-					"cz": 824
-				}
-			]
-		},
-		"drops": {
-			"armorup": [
-				{
-					"x": -2551,
-					"y": 1748,
-					"z": 702,
-					"count": 1
-				},
-				{
-					"x": -2273,
-					"y": -2862,
-					"z": 877,
-					"count": 1
-				}
-			],
-			"medkit": [
-				{
-					"x": 166,
-					"y": 2973,
-					"z": 899,
-					"count": 1
-				},
-				{
-					"x": 121,
-					"y": -3909,
-					"z": 607,
-					"count": 1
-				}
-			],
-			"damageup": [
-				{
-					"x": 2992,
-					"y": 699,
-					"z": 717,
-					"count": 1
-				},
-				{
-					"x": 2756,
-					"y": -1740,
-					"z": 824,
-					"count": 1
-				}
-			]
-		},
-		"goldRegions": [],
 		"capture": {
 			"account": "camelCase",
 			"battleId": "7d5a886337eae3f7",
@@ -185,7 +29,51 @@
 				47.1,
 				65.1
 			]
-		}
+		},
+		"types": {
+			"armorup": 2,
+			"medkit": 2,
+			"damageup": 2
+		},
+		"points": {
+			"armorup": [
+				{
+					"x": -2551,
+					"y": 1748,
+					"z": 702
+				},
+				{
+					"x": -2273,
+					"y": -2862,
+					"z": 877
+				}
+			],
+			"medkit": [
+				{
+					"x": 166,
+					"y": 2973,
+					"z": 899
+				},
+				{
+					"x": 121,
+					"y": -3909,
+					"z": 607
+				}
+			],
+			"damageup": [
+				{
+					"x": 2992,
+					"y": 699,
+					"z": 717
+				},
+				{
+					"x": 2756,
+					"y": -1740,
+					"z": 824
+				}
+			]
+		},
+		"goldRegions": []
 	},
-	"updatedAt": "2026-10-04T07:40:55.934Z"
+	"updatedAt": "2026-10-04T15:23:21.170Z"
 }

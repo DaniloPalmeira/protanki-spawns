@@ -2,77 +2,6 @@
 	"mapId": "map_island",
 	"modes": {},
 	"bonus": {
-		"types": {
-			"damageup": 1,
-			"armorup": 1
-		},
-		"region": {
-			"damageup": {
-				"minX": -1422,
-				"maxX": -1422,
-				"minY": -2305,
-				"maxY": -2305,
-				"minZ": 869,
-				"maxZ": 869
-			},
-			"armorup": {
-				"minX": 1043,
-				"maxX": 1043,
-				"minY": 990,
-				"maxY": 990,
-				"minZ": 641,
-				"maxZ": 641
-			}
-		},
-		"zones": {
-			"damageup": [
-				{
-					"minX": -1422,
-					"maxX": -1422,
-					"minY": -2305,
-					"maxY": -2305,
-					"minZ": 869,
-					"maxZ": 869,
-					"samples": 1,
-					"cx": -1422,
-					"cy": -2305,
-					"cz": 869
-				}
-			],
-			"armorup": [
-				{
-					"minX": 1043,
-					"maxX": 1043,
-					"minY": 990,
-					"maxY": 990,
-					"minZ": 641,
-					"maxZ": 641,
-					"samples": 1,
-					"cx": 1043,
-					"cy": 990,
-					"cz": 641
-				}
-			]
-		},
-		"drops": {
-			"damageup": [
-				{
-					"x": -1422,
-					"y": -2305,
-					"z": 869,
-					"count": 1
-				}
-			],
-			"armorup": [
-				{
-					"x": 1043,
-					"y": 990,
-					"z": 641,
-					"count": 1
-				}
-			]
-		},
-		"goldRegions": [],
 		"capture": {
 			"account": "Danlino",
 			"battleId": "a6d5066af11d8f0c",
@@ -97,7 +26,28 @@
 				56.9
 			],
 			"reclassified": "tempo→teto: 233s de silêncio > 82s exigidos"
-		}
+		},
+		"types": {
+			"damageup": 1,
+			"armorup": 1
+		},
+		"points": {
+			"damageup": [
+				{
+					"x": -1422,
+					"y": -2305,
+					"z": 869
+				}
+			],
+			"armorup": [
+				{
+					"x": 1043,
+					"y": 990,
+					"z": 641
+				}
+			]
+		},
+		"goldRegions": []
 	},
-	"updatedAt": "2026-10-04T09:45:54.659Z"
+	"updatedAt": "2026-10-04T15:23:21.178Z"
 }

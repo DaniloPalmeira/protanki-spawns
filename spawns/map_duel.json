@@ -2,139 +2,6 @@
 	"mapId": "map_duel",
 	"modes": {},
 	"bonus": {
-		"types": {
-			"medkit": 1,
-			"damageup": 1,
-			"armorup": 1,
-			"nitro": 1
-		},
-		"region": {
-			"medkit": {
-				"minX": 520,
-				"maxX": 520,
-				"minY": -404,
-				"maxY": -404,
-				"minZ": 624,
-				"maxZ": 624
-			},
-			"damageup": {
-				"minX": 622,
-				"maxX": 622,
-				"minY": 57,
-				"maxY": 57,
-				"minZ": 867,
-				"maxZ": 867
-			},
-			"armorup": {
-				"minX": 254,
-				"maxX": 254,
-				"minY": 824,
-				"maxY": 824,
-				"minZ": 643,
-				"maxZ": 643
-			},
-			"nitro": {
-				"minX": 517,
-				"maxX": 517,
-				"minY": 565,
-				"maxY": 565,
-				"minZ": 762,
-				"maxZ": 762
-			}
-		},
-		"zones": {
-			"medkit": [
-				{
-					"minX": 520,
-					"maxX": 520,
-					"minY": -404,
-					"maxY": -404,
-					"minZ": 624,
-					"maxZ": 624,
-					"samples": 1,
-					"cx": 520,
-					"cy": -404,
-					"cz": 624
-				}
-			],
-			"damageup": [
-				{
-					"minX": 622,
-					"maxX": 622,
-					"minY": 57,
-					"maxY": 57,
-					"minZ": 867,
-					"maxZ": 867,
-					"samples": 1,
-					"cx": 622,
-					"cy": 57,
-					"cz": 867
-				}
-			],
-			"armorup": [
-				{
-					"minX": 254,
-					"maxX": 254,
-					"minY": 824,
-					"maxY": 824,
-					"minZ": 643,
-					"maxZ": 643,
-					"samples": 1,
-					"cx": 254,
-					"cy": 824,
-					"cz": 643
-				}
-			],
-			"nitro": [
-				{
-					"minX": 517,
-					"maxX": 517,
-					"minY": 565,
-					"maxY": 565,
-					"minZ": 762,
-					"maxZ": 762,
-					"samples": 1,
-					"cx": 517,
-					"cy": 565,
-					"cz": 762
-				}
-			]
-		},
-		"drops": {
-			"medkit": [
-				{
-					"x": 520,
-					"y": -404,
-					"z": 624,
-					"count": 1
-				}
-			],
-			"damageup": [
-				{
-					"x": 622,
-					"y": 57,
-					"z": 867,
-					"count": 1
-				}
-			],
-			"armorup": [
-				{
-					"x": 254,
-					"y": 824,
-					"z": 643,
-					"count": 1
-				}
-			],
-			"nitro": [
-				{
-					"x": 517,
-					"y": 565,
-					"z": 762,
-					"count": 1
-				}
-			]
-		},
-		"goldRegions": [],
 		"capture": {
 			"account": "Danlino",
 			"battleId": "9c31facadf9aab30",
@@ -160,7 +27,44 @@
 				35.1,
 				52.1
 			]
-		}
+		},
+		"types": {
+			"medkit": 1,
+			"damageup": 1,
+			"armorup": 1,
+			"nitro": 1
+		},
+		"points": {
+			"medkit": [
+				{
+					"x": 520,
+					"y": -404,
+					"z": 624
+				}
+			],
+			"damageup": [
+				{
+					"x": 622,
+					"y": 57,
+					"z": 867
+				}
+			],
+			"armorup": [
+				{
+					"x": 254,
+					"y": 824,
+					"z": 643
+				}
+			],
+			"nitro": [
+				{
+					"x": 517,
+					"y": 565,
+					"z": 762
+				}
+			]
+		},
+		"goldRegions": []
 	},
-	"updatedAt": "2026-10-04T08:21:20.654Z"
+	"updatedAt": "2026-10-04T15:23:21.168Z"
 }

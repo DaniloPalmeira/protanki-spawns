@@ -2,175 +2,6 @@
 	"mapId": "map_boombox",
 	"modes": {},
 	"bonus": {
-		"types": {
-			"medkit": 2,
-			"armorup": 1,
-			"nitro": 2,
-			"damageup": 1
-		},
-		"region": {
-			"medkit": {
-				"minX": -2463,
-				"maxX": 1686,
-				"minY": -2588,
-				"maxY": 4175,
-				"minZ": 1765,
-				"maxZ": 1777
-			},
-			"armorup": {
-				"minX": 234,
-				"maxX": 234,
-				"minY": 2112,
-				"maxY": 2112,
-				"minZ": 1880,
-				"maxZ": 1880
-			},
-			"nitro": {
-				"minX": -1485,
-				"maxX": 724,
-				"minY": -2637,
-				"maxY": 4406,
-				"minZ": 1580,
-				"maxZ": 1796
-			},
-			"damageup": {
-				"minX": -1870,
-				"maxX": -1870,
-				"minY": -1130,
-				"maxY": -1130,
-				"minZ": 1836,
-				"maxZ": 1836
-			}
-		},
-		"zones": {
-			"medkit": [
-				{
-					"minX": -2463,
-					"maxX": -2463,
-					"minY": -2588,
-					"maxY": -2588,
-					"minZ": 1765,
-					"maxZ": 1765,
-					"samples": 1,
-					"cx": -2463,
-					"cy": -2588,
-					"cz": 1765
-				},
-				{
-					"minX": 1686,
-					"maxX": 1686,
-					"minY": 4175,
-					"maxY": 4175,
-					"minZ": 1777,
-					"maxZ": 1777,
-					"samples": 1,
-					"cx": 1686,
-					"cy": 4175,
-					"cz": 1777
-				}
-			],
-			"armorup": [
-				{
-					"minX": 234,
-					"maxX": 234,
-					"minY": 2112,
-					"maxY": 2112,
-					"minZ": 1880,
-					"maxZ": 1880,
-					"samples": 1,
-					"cx": 234,
-					"cy": 2112,
-					"cz": 1880
-				}
-			],
-			"nitro": [
-				{
-					"minX": -1485,
-					"maxX": -1485,
-					"minY": 4406,
-					"maxY": 4406,
-					"minZ": 1796,
-					"maxZ": 1796,
-					"samples": 1,
-					"cx": -1485,
-					"cy": 4406,
-					"cz": 1796
-				},
-				{
-					"minX": 724,
-					"maxX": 724,
-					"minY": -2637,
-					"maxY": -2637,
-					"minZ": 1580,
-					"maxZ": 1580,
-					"samples": 1,
-					"cx": 724,
-					"cy": -2637,
-					"cz": 1580
-				}
-			],
-			"damageup": [
-				{
-					"minX": -1870,
-					"maxX": -1870,
-					"minY": -1130,
-					"maxY": -1130,
-					"minZ": 1836,
-					"maxZ": 1836,
-					"samples": 1,
-					"cx": -1870,
-					"cy": -1130,
-					"cz": 1836
-				}
-			]
-		},
-		"drops": {
-			"medkit": [
-				{
-					"x": -2463,
-					"y": -2588,
-					"z": 1765,
-					"count": 1
-				},
-				{
-					"x": 1686,
-					"y": 4175,
-					"z": 1777,
-					"count": 1
-				}
-			],
-			"armorup": [
-				{
-					"x": 234,
-					"y": 2112,
-					"z": 1880,
-					"count": 1
-				}
-			],
-			"nitro": [
-				{
-					"x": -1485,
-					"y": 4406,
-					"z": 1796,
-					"count": 1
-				},
-				{
-					"x": 724,
-					"y": -2637,
-					"z": 1580,
-					"count": 1
-				}
-			],
-			"damageup": [
-				{
-					"x": -1870,
-					"y": -1130,
-					"z": 1836,
-					"count": 1
-				}
-			]
-		},
-		"goldRegions": [],
 		"capture": {
 			"account": "camelCase",
 			"battleId": "b3e36d1de80090c9",
@@ -198,7 +29,54 @@
 				53.8,
 				73.8
 			]
-		}
+		},
+		"types": {
+			"medkit": 2,
+			"armorup": 1,
+			"nitro": 2,
+			"damageup": 1
+		},
+		"points": {
+			"medkit": [
+				{
+					"x": -2463,
+					"y": -2588,
+					"z": 1765
+				},
+				{
+					"x": 1686,
+					"y": 4175,
+					"z": 1777
+				}
+			],
+			"armorup": [
+				{
+					"x": 234,
+					"y": 2112,
+					"z": 1880
+				}
+			],
+			"nitro": [
+				{
+					"x": -1485,
+					"y": 4406,
+					"z": 1796
+				},
+				{
+					"x": 724,
+					"y": -2637,
+					"z": 1580
+				}
+			],
+			"damageup": [
+				{
+					"x": -1870,
+					"y": -1130,
+					"z": 1836
+				}
+			]
+		},
+		"goldRegions": []
 	},
-	"updatedAt": "2026-10-04T08:01:49.336Z"
+	"updatedAt": "2026-10-04T15:23:21.161Z"
 }

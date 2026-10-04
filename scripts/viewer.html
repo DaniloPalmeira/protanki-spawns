@@ -110,7 +110,7 @@ svg{display:block;width:100%;height:auto}
   $("#reload").onclick=()=>load(true);
 
   // layer toggles (montados uma vez)
-  const layerDefs=[["spawns","spawns","var(--accent)"],["flags","bandeiras","var(--flag)"],["cp","pontos CP","var(--text)"],["bonus","zonas de bônus","var(--text-dim)"],["gold","gold","var(--gold)"],["yaw","direção","var(--text-dim)"]];
+  const layerDefs=[["spawns","spawns","var(--accent)"],["flags","bandeiras","var(--flag)"],["cp","pontos CP","var(--text)"],["bonus","suprimentos","var(--text-dim)"],["gold","gold","var(--gold)"],["yaw","direção","var(--text-dim)"]];
   const tgWrap=$("#toggles");
   for(const [key,label,dot] of layerDefs){
     const l=document.createElement("label"); l.className="tg"+(state.layers[key]?" on":""); l.style.setProperty("--dot",dot);

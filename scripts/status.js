@@ -51,13 +51,13 @@ if (!soSpawns) {
 	const comBonus = maps.filter((m) => m.bonus && m.bonus.capture);
 	console.log(`=== suprimentos: ${comBonus.length} mapas capturados ===`);
 	if (soBonus || !soFaltando) {
-		console.log("mapa                      quedas  tipos                              zonas gold  escuta  conta");
+		console.log("mapa                      pontos  tipos                              razão  gold  escuta  conta");
 		for (const m of comBonus) {
 			const b = m.bonus;
 			const tipos = Object.entries(b.types || {}).map(([t, n]) => `${t}:${n}`).join(" ");
-			const zonas = Object.values(b.zones || {}).reduce((a, z) => a + z.length, 0);
+			const pontos = Object.values(b.points || b.drops || {}).reduce((a, l) => a + l.length, 0);
 			const escuta = b.capture.elapsedMs ? `${Math.round(b.capture.elapsedMs / 1000)}s` : "?";
-			console.log(`${m.mapId.padEnd(25)} ${String(b.capture.drops ?? "?").padStart(6)}  ${tipos.padEnd(34)} ${String(zonas).padStart(5)} ${String((b.goldRegions || []).length).padStart(4)}  ${escuta.padStart(6)}  ${b.capture.account || ""}${b.capture.kicked ? "  KICK" : ""}`);
+			console.log(`${m.mapId.padEnd(25)} ${String(pontos).padStart(6)}  ${tipos.padEnd(34)} ${String(b.capture.stopReason || "?").padEnd(6)} ${String((b.goldRegions || []).length).padStart(4)}  ${escuta.padStart(6)}  ${b.capture.account || ""}`);
 		}
 	}
 	const semQueda = comBonus.filter((m) => !(m.bonus.capture.drops > 0));
