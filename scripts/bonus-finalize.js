@@ -38,7 +38,7 @@ for (const f of files) {
 		continue;
 	}
 	const c = d.bonus?.capture;
-	if (!c) continue;
+	if (!c || !c.finishedAt || !c.stopReason) continue; // sessão ainda em andamento
 
 	let novo = null;
 	if (c.stopReason === "tempo" && c.drops > 0 && c.idleMs != null) {
