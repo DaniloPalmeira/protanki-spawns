@@ -1,0 +1,10 @@
+node_modules/
+
+# credenciais das contas — nunca versionar
+accounts.json
+
+# node.exe renomeado (o NoPing tunela pelo nome do executável) — copie o seu
+ProTanki.exe
+
+# progresso retomável das varreduras (o acervo em spawns/ é versionado)
+state/

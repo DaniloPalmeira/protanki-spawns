@@ -1,0 +1,306 @@
+<title>ProTanki spawns</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#f3f5f8; --surface:#ffffff; --surface-2:#eaedf2; --border:#d7dce3; --border-strong:#c2c9d3;
+  --text:#1b1f24; --text-dim:#5b6570; --text-mut:#8a94a0;
+  --red:#d33540; --red-line:#d33540; --red-soft:rgba(211,53,64,.13);
+  --blue:#2f6fd8; --blue-line:#2f6fd8; --blue-soft:rgba(47,111,216,.13);
+  --none:#7b8794; --flag:#d9922a; --gold:#c99a19;
+  --grid:rgba(20,30,45,.06); --grid-axis:rgba(20,30,45,.13); --accent:#2f6fd8;
+  --plot-bg:#eef1f5;
+  --font:"IBM Plex Sans",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+:root:not([data-theme="light"]){ @media (prefers-color-scheme:dark){
+  --bg:#12151a; --surface:#1a1e25; --surface-2:#232932; --border:#2e3641; --border-strong:#3c4552;
+  --text:#e7ebf1; --text-dim:#98a3b1; --text-mut:#6b7684;
+  --red:#ff5d64; --red-line:#ff5d64; --red-soft:rgba(255,93,100,.16);
+  --blue:#5090f2; --blue-line:#5090f2; --blue-soft:rgba(80,144,242,.16);
+  --none:#8590a0; --flag:#efb457; --gold:#e0b53c;
+  --grid:rgba(150,170,200,.08); --grid-axis:rgba(150,170,200,.17); --accent:#5090f2; --plot-bg:#161b22;
+}}
+:root[data-theme="dark"]{
+  --bg:#12151a; --surface:#1a1e25; --surface-2:#232932; --border:#2e3641; --border-strong:#3c4552;
+  --text:#e7ebf1; --text-dim:#98a3b1; --text-mut:#6b7684;
+  --red:#ff5d64; --red-line:#ff5d64; --red-soft:rgba(255,93,100,.16);
+  --blue:#5090f2; --blue-line:#5090f2; --blue-soft:rgba(80,144,242,.16);
+  --none:#8590a0; --flag:#efb457; --gold:#e0b53c;
+  --grid:rgba(150,170,200,.08); --grid-axis:rgba(150,170,200,.17); --accent:#5090f2; --plot-bg:#161b22;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);font-size:14px;line-height:1.5}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+.wrap{max-width:1080px;margin:0 auto;padding:20px 20px 32px}
+.head{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 14px;margin-bottom:14px}
+.head h1{font-size:20px;font-weight:500;margin:0}
+.head .sub{color:var(--text-dim);font-size:13px}
+.bar{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;padding:12px 14px;background:var(--surface);border:1px solid var(--border);border-radius:12px;margin-bottom:12px}
+.grp{display:flex;align-items:center;gap:8px}
+.grp label{color:var(--text-dim);font-size:12px;letter-spacing:.02em}
+select{font-family:var(--font);font-size:13px;color:var(--text);background:var(--surface-2);border:1px solid var(--border);border-radius:8px;padding:6px 10px;cursor:pointer}
+select:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.seg{display:flex;gap:2px;background:var(--surface-2);border:1px solid var(--border);border-radius:8px;padding:2px}
+.seg button{font-family:var(--font);font-size:12px;color:var(--text-dim);background:transparent;border:0;border-radius:6px;padding:5px 11px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--surface);color:var(--text);font-weight:500;box-shadow:0 0 0 1px var(--border)}
+.toggles{display:flex;flex-wrap:wrap;gap:6px}
+.tg{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--text-dim);background:var(--surface-2);border:1px solid var(--border);border-radius:999px;padding:4px 11px;cursor:pointer;user-select:none}
+.tg input{appearance:none;width:9px;height:9px;border-radius:50%;background:var(--text-mut);margin:0;cursor:pointer}
+.tg.on{color:var(--text);border-color:var(--border-strong)}
+.tg.on input{background:var(--dot,var(--accent))}
+.tg:focus-within{outline:2px solid var(--accent);outline-offset:1px}
+.btn{font-family:var(--font);font-size:12px;color:var(--text);background:var(--surface-2);border:1px solid var(--border);border-radius:8px;padding:6px 11px;cursor:pointer}
+.btn:hover{border-color:var(--border-strong)}
+.btn:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.plotwrap{position:relative;background:var(--plot-bg);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+svg{display:block;width:100%;height:auto}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:12px;font-size:12.5px;color:var(--text-dim)}
+.legend .it{display:inline-flex;align-items:center;gap:7px}
+.sw{width:12px;height:12px;border-radius:50%;flex:none}
+.sw.dm{border-radius:3px}
+.sw.half{background:linear-gradient(90deg,var(--red) 0 50%,var(--blue) 50% 100%)}
+.sw.flag{border-radius:2px;transform:rotate(45deg);width:10px;height:10px}
+.stat{margin-left:auto;font-family:var(--mono);font-size:12px;color:var(--text-dim)}
+.tip{position:absolute;pointer-events:none;z-index:5;background:var(--surface);border:1px solid var(--border-strong);border-radius:8px;padding:7px 9px;font-family:var(--mono);font-size:12px;color:var(--text);box-shadow:0 4px 14px rgba(0,0,0,.18);white-space:nowrap;opacity:0;transition:opacity .08s}
+.tip b{font-weight:500}
+.tip .t-red{color:var(--red)} .tip .t-blue{color:var(--blue)} .tip .t-none{color:var(--none)}
+.note{margin-top:14px;font-size:12.5px;color:var(--text-mut);max-width:64ch}
+.pt{cursor:crosshair}
+</style>
+
+<div class="wrap">
+  <h2 class="sr-only">Top-down map showing every recorded tank spawn point colored by team, flag bases, control points and bonus-drop zones, for each ProTanki map.</h2>
+  <div class="head">
+    <h1>ProTanki spawns</h1>
+    <span class="sub" id="subtitle">carregando…</span>
+  </div>
+
+  <div class="bar">
+    <div class="grp"><label for="mapsel">mapa</label><select id="mapsel"></select></div>
+    <div class="grp"><label>modo</label><div class="seg" id="modeseg"></div></div>
+    <div class="toggles" id="toggles"></div>
+    <button class="btn" id="reload" title="Relê os spawns/ do disco sem recarregar a página">↻ atualizar</button>
+  </div>
+
+  <div class="plotwrap" id="plotwrap">
+    <svg id="svg" viewBox="0 0 960 640" role="img" aria-labelledby="svgtitle"></svg>
+    <div class="tip" id="tip"></div>
+  </div>
+  <title id="svgtitle">Spawn plot</title>
+
+  <div class="legend" id="legend"></div>
+  <p class="note">Coordenadas do jogo (unidades ≈ milhares). Cada ponto é uma posição de spawn observada; o traço curto indica a direção (yaw). Passe o mouse para ver a posição exata e o time. O botão <b>↻ atualizar</b> relê os arquivos <code>spawns/</code> na hora — depois de uma nova coleta, é só clicar.</p>
+</div>
+
+<script>
+(function(){
+  const $=s=>document.querySelector(s);
+  const svgNS="http://www.w3.org/2000/svg";
+  const svg=$("#svg"), tip=$("#tip"), wrap=$("#plotwrap");
+  const W=960,H=640,PAD=46;
+  const teamColor={RED:"var(--red)",BLUE:"var(--blue)",NONE:"var(--none)"};
+  const teamLine={RED:"var(--red-line)",BLUE:"var(--blue-line)",NONE:"var(--none)"};
+
+  let DATA={};
+  const state={map:null,mode:null,layers:{spawns:true,flags:true,cp:true,bonus:true,gold:true,yaw:true}};
+
+  const msel=$("#mapsel");
+  msel.onchange=()=>{state.map=msel.value;pickMode();render();};
+  $("#reload").onclick=()=>load(true);
+
+  // layer toggles (montados uma vez)
+  const layerDefs=[["spawns","spawns","var(--accent)"],["flags","bandeiras","var(--flag)"],["cp","pontos CP","var(--text)"],["bonus","zonas de bônus","var(--text-dim)"],["gold","gold","var(--gold)"],["yaw","direção","var(--text-dim)"]];
+  const tgWrap=$("#toggles");
+  for(const [key,label,dot] of layerDefs){
+    const l=document.createElement("label"); l.className="tg"+(state.layers[key]?" on":""); l.style.setProperty("--dot",dot);
+    l.innerHTML='<input type="checkbox"'+(state.layers[key]?" checked":"")+'> '+label;
+    const cb=l.querySelector("input");
+    cb.onchange=()=>{state.layers[key]=cb.checked;l.classList.toggle("on",cb.checked);render();};
+    tgWrap.appendChild(l);
+  }
+
+  function modesOf(m){return Object.keys(DATA[m].modes||{});}
+  function pickMode(){const ms=modesOf(state.map); if(!ms.includes(state.mode)) state.mode=ms.includes("CTF")?"CTF":(ms[0]||null); buildModeSeg();}
+
+  function buildModeSeg(){
+    const seg=$("#modeseg"); seg.innerHTML="";
+    for(const md of modesOf(state.map)){
+      const b=document.createElement("button"); b.textContent=md; b.setAttribute("aria-pressed",md===state.mode);
+      b.onclick=()=>{state.mode=md;buildModeSeg();render();}; seg.appendChild(b);
+    }
+  }
+
+  function fillMapPicker(){
+    const ids=Object.keys(DATA).sort((a,b)=>DATA[a].name.localeCompare(DATA[b].name));
+    msel.innerHTML="";
+    for(const id of ids){const o=document.createElement("option");o.value=id;o.textContent=DATA[id].name+"  ·  "+id.replace(/^map_/,"");msel.appendChild(o);}
+    if(!state.map || !DATA[state.map]) state.map=DATA.map_sandbox?"map_sandbox":ids[0];
+    msel.value=state.map;
+  }
+
+  function allPoints(m){
+    const d=DATA[m],pts=[];
+    for(const md of Object.values(d.modes||{})) for(const l of Object.values(md)) for(const p of l) pts.push([p[0],p[1]]);
+    if(d.ctf){pts.push(d.ctf.red);pts.push(d.ctf.blue);}
+    if(d.cp) for(const c of d.cp) pts.push([c[0],c[1]]);
+    if(d.bonus) for(const l of Object.values(d.bonus)) for(const p of l) pts.push(p);
+    if(d.gold) for(const g of d.gold) pts.push(g);
+    return pts;
+  }
+
+  function transform(m){
+    const pts=allPoints(m); if(!pts.length) return null;
+    let minX=1e9,maxX=-1e9,minY=1e9,maxY=-1e9;
+    for(const[x,y]of pts){minX=Math.min(minX,x);maxX=Math.max(maxX,x);minY=Math.min(minY,y);maxY=Math.max(maxY,y);}
+    const ww=Math.max(1,maxX-minX),hh=Math.max(1,maxY-minY);
+    const s=Math.min((W-2*PAD)/ww,(H-2*PAD)/hh);
+    const ox=(W-ww*s)/2,oy=(H-hh*s)/2;
+    return {s,fx:x=>ox+(x-minX)*s,fy:y=>oy+(maxY-y)*s}; // flip Y so north is up
+  }
+
+  function el(tag,attrs){const e=document.createElementNS(svgNS,tag);for(const k in attrs)e.setAttribute(k,attrs[k]);return e;}
+
+  function render(){
+    if(!state.map||!DATA[state.map])return;
+    const d=DATA[state.map], tr=transform(state.map);
+    $("#subtitle").textContent=d.name+(state.mode?" — modo "+state.mode:" — só suprimentos")+(d.capture?" · "+(d.capture.drops??"?")+" quedas ("+d.capture.account+")":"");
+    $("#svgtitle").textContent="Spawns de "+d.name+", modo "+state.mode;
+    svg.innerHTML="";
+    if(!tr){return;}
+
+    const g=el("g",{}); svg.appendChild(g);
+    const step=1000*tr.s;
+    for(let gx=PAD-((PAD)%step);gx<W-6;gx+=step) g.appendChild(el("line",{x1:gx,y1:8,x2:gx,y2:H-8,stroke:"var(--grid)","stroke-width":1}));
+    for(let gy=PAD-((PAD)%step);gy<H-6;gy+=step) g.appendChild(el("line",{x1:8,y1:gy,x2:W-8,y2:gy,stroke:"var(--grid)","stroke-width":1}));
+
+    const md=(state.mode&&d.modes[state.mode])||{};
+
+    if(state.layers.bonus && d.bonus){
+      for(const l of Object.values(d.bonus)) for(const[x,y]of l){
+        svg.appendChild(el("circle",{cx:tr.fx(x),cy:tr.fy(y),r:9,fill:"none",stroke:"var(--text-dim)","stroke-width":1,"stroke-dasharray":"2 3",opacity:.55}));
+      }
+    }
+    if(state.layers.bonus && d.zones){
+      for(const l of Object.values(d.zones)) for(const[x0,y0,x1,y1,n]of l){
+        const X=[tr.fx(x0),tr.fx(x1)],Y=[tr.fy(y0),tr.fy(y1)];
+        svg.appendChild(el("rect",{x:Math.min(...X),y:Math.min(...Y),width:Math.abs(X[1]-X[0])||2,height:Math.abs(Y[1]-Y[0])||2,fill:"var(--text-dim)","fill-opacity":.12,stroke:"var(--text-dim)","stroke-width":1,"stroke-dasharray":n<5?"3 3":"none"}));
+      }
+    }
+    if(state.layers.gold && d.gold){
+      for(const[x,y]of d.gold){
+        svg.appendChild(el("circle",{cx:tr.fx(x),cy:tr.fy(y),r:13,fill:"none",stroke:"var(--gold)","stroke-width":2,opacity:.9}));
+        const t=el("text",{x:tr.fx(x),y:tr.fy(y)+4,fill:"var(--gold)","font-size":11,"text-anchor":"middle","font-family":"var(--mono)"});t.textContent="G";svg.appendChild(t);
+      }
+    }
+
+    const counts={};
+    let sharedCount=0;
+    if(state.layers.spawns){
+      // Agrupa por POSIÇÃO: a mesma posição pode pertencer a mais de um time (spawn que o
+      // servidor usa para os dois — mapa simétrico com base que gira entre partidas).
+      const byPos=new Map();
+      for(const [team,list] of Object.entries(md)){
+        counts[team]=list.length;
+        for(const p of list){
+          const k=p[0]+","+p[1];
+          let e=byPos.get(k);
+          if(!e) byPos.set(k,e={x:p[0],y:p[1],teams:{}});
+          e.teams[team]=p;
+        }
+      }
+      for(const e of byPos.values()){
+        const teams=Object.keys(e.teams);
+        const shared=teams.includes("RED")&&teams.includes("BLUE");
+        if(shared) sharedCount++;
+        const cx=tr.fx(e.x),cy=tr.fy(e.y);
+
+        // Traço de direção — um por time presente (num compartilhado pode haver dois yaws).
+        if(state.layers.yaw){
+          for(const [team,p] of Object.entries(e.teams)){
+            if(p.length>2){
+              const a=-p[2];
+              svg.appendChild(el("line",{x1:cx,y1:cy,x2:cx+Math.cos(a)*11,y2:cy+Math.sin(a)*11,stroke:teamLine[team]||"var(--none)","stroke-width":1.6,"stroke-linecap":"round",opacity:.85}));
+            }
+          }
+        }
+
+        const r=5;
+        if(shared){
+          // Metade vermelha (esquerda) + metade azul (direita), com o mesmo contorno das sólidas.
+          svg.appendChild(el("path",{d:"M "+cx+" "+(cy-r)+" A "+r+" "+r+" 0 0 0 "+cx+" "+(cy+r)+" Z",fill:teamColor.RED}));
+          svg.appendChild(el("path",{d:"M "+cx+" "+(cy-r)+" A "+r+" "+r+" 0 0 1 "+cx+" "+(cy+r)+" Z",fill:teamColor.BLUE}));
+          svg.appendChild(el("circle",{cx,cy,r,fill:"none",stroke:"var(--plot-bg)","stroke-width":1.4}));
+        }else{
+          svg.appendChild(el("circle",{cx,cy,r,fill:teamColor[teams[0]]||"var(--none)",stroke:"var(--plot-bg)","stroke-width":1.4}));
+        }
+
+        // Alvo transparente por cima só para o tooltip.
+        const pp=e.teams[teams[0]];
+        const yaw=pp&&pp.length>2?pp[2]:undefined;
+        const hit=el("circle",{cx,cy,r:r+1,fill:"transparent",class:"pt"});
+        hit.addEventListener("mousemove",ev=>showTip(ev,[e.x,e.y,yaw],shared?"RED+BLUE":teams[0]));
+        hit.addEventListener("mouseleave",hideTip);
+        svg.appendChild(hit);
+      }
+    }
+
+    if(state.layers.cp && d.cp){
+      for(const [x,y,name] of d.cp){
+        const cx=tr.fx(x),cy=tr.fy(y);
+        svg.appendChild(el("circle",{cx,cy,r:11,fill:"var(--surface)",stroke:"var(--text)","stroke-width":1.6,class:"pt"}));
+        const t=el("text",{x:cx,y:cy+4,fill:"var(--text)","font-size":12,"text-anchor":"middle","font-weight":500});t.textContent=name||"?";svg.appendChild(t);
+      }
+    }
+
+    if(state.layers.flags && d.ctf){
+      for(const [team,pos] of [["RED",d.ctf.red],["BLUE",d.ctf.blue]]){
+        if(!pos)continue;
+        const cx=tr.fx(pos[0]),cy=tr.fy(pos[1]);
+        svg.appendChild(el("rect",{x:cx-8,y:cy-8,width:16,height:16,rx:2,transform:"rotate(45 "+cx+" "+cy+")",fill:team==="RED"?"var(--red)":"var(--blue)",stroke:"var(--flag)","stroke-width":2.4}));
+        const t=el("text",{x:cx,y:cy+4,fill:"#fff","font-size":11,"text-anchor":"middle","font-weight":500});t.textContent=team[0];svg.appendChild(t);
+      }
+    }
+
+    const lg=$("#legend"); lg.innerHTML="";
+    const teamsPresent=Object.keys(md);
+    for(const team of teamsPresent){
+      const nm=team==="NONE"?"spawns (sem time)":"time "+(team==="RED"?"vermelho":"azul");
+      lg.insertAdjacentHTML("beforeend",'<span class="it"><span class="sw '+(team==="NONE"?"dm":"")+'" style="background:'+(teamColor[team]||"var(--none)")+'"></span>'+nm+' · '+(counts[team]||0)+'</span>');
+    }
+    if(sharedCount) lg.insertAdjacentHTML("beforeend",'<span class="it"><span class="sw half"></span>compartilhado (2 times) · '+sharedCount+'</span>');
+    if(state.layers.flags && d.ctf) lg.insertAdjacentHTML("beforeend",'<span class="it"><span class="sw flag" style="background:var(--flag)"></span>base da bandeira</span>');
+    if(state.layers.cp && d.cp) lg.insertAdjacentHTML("beforeend",'<span class="it"><span class="sw" style="background:var(--surface);border:1.5px solid var(--text)"></span>ponto de controle</span>');
+    const tot=teamsPresent.reduce((a,t)=>a+(counts[t]||0),0);
+    lg.insertAdjacentHTML("beforeend",'<span class="stat">'+tot+' spawns · '+state.map+'</span>');
+  }
+
+  function showTip(ev,p,team){
+    let head;
+    if(team==="RED+BLUE") head='<b class="t-red">RED</b>+<b class="t-blue">BLUE</b> <span style="color:var(--text-mut)">compart.</span>';
+    else { const cls=team==="RED"?"t-red":team==="BLUE"?"t-blue":"t-none"; head='<b class="'+cls+'">'+team+'</b>'; }
+    const yaw=(p.length>2 && p[2]!==undefined)?' &nbsp;yaw '+p[2]:'';
+    tip.innerHTML=head+' &nbsp;x '+p[0]+' &nbsp;y '+p[1]+yaw;
+    const r=wrap.getBoundingClientRect();
+    let x=ev.clientX-r.left+12, y=ev.clientY-r.top+12;
+    tip.style.opacity="1";
+    const tw=tip.offsetWidth,th=tip.offsetHeight;
+    if(x+tw>r.width-4)x=ev.clientX-r.left-tw-12;
+    if(y+th>r.height-4)y=ev.clientY-r.top-th-12;
+    tip.style.left=x+"px"; tip.style.top=y+"px";
+  }
+  function hideTip(){tip.style.opacity="0";}
+
+  async function load(isReload){
+    try{
+      const r=await fetch("data.json?t="+Date.now());
+      if(!r.ok) throw new Error("HTTP "+r.status);
+      DATA=await r.json();
+      fillMapPicker(); pickMode(); render();
+    }catch(e){
+      $("#subtitle").textContent="erro ao carregar data.json: "+e.message;
+    }
+  }
+  load(false);
+})();
+</script>

@@ -1,0 +1,18 @@
+{
+  "name": "protanki-spawns",
+  "version": "1.0.0",
+  "description": "Captura headless dos pontos de spawn de players e de suprimentos (caixas) do ProTanki, mapa a mapa",
+  "private": true,
+  "scripts": {
+    "bonus": "ProTanki.exe scripts/bonus-sweep.js",
+    "bonus:dry": "ProTanki.exe scripts/bonus-sweep.js --dry-run",
+    "spawns": "ProTanki.exe scripts/spawn-sweep.js",
+    "spawns:dry": "ProTanki.exe scripts/spawn-sweep.js --dry-run",
+    "status": "node scripts/status.js",
+    "viewer": "node scripts/viewer.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "protanki-protocol": "github:DaniloPalmeira/protanki-protocol"
+  }
+}
