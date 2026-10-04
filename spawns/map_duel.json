@@ -2,69 +2,69 @@
 	"mapId": "map_duel",
 	"modes": {},
 	"bonus": {
-		"capture": {
-			"account": "Danlino",
-			"battleId": "9c31facadf9aab30",
-			"mode": "DM",
-			"theme": "SUMMER",
-			"startedAt": "2026-10-04T08:19:52.200Z",
-			"listenMs": 290000,
-			"kickPeriodMs": 300000,
-			"esportDropTiming": true,
-			"privateBattle": true,
-			"finishedAt": "2026-10-04T08:21:20.654Z",
-			"drops": 4,
-			"goldRegions": 0,
-			"elapsedMs": 86800,
-			"stopReason": "teto",
-			"capacity": 4,
-			"maxGapMs": 16990,
-			"firstDropMs": 18100,
-			"idleMs": 34670,
-			"timeline": [
-				18.1,
-				29.1,
-				35.1,
-				52.1
-			]
-		},
 		"types": {
-			"medkit": 1,
-			"damageup": 1,
 			"armorup": 1,
+			"damageup": 1,
+			"medkit": 1,
 			"nitro": 1
 		},
 		"points": {
-			"medkit": [
+			"armorup": [
 				{
-					"x": 520,
-					"y": -404,
-					"z": 624
+					"x": 180,
+					"y": 797,
+					"z": 634
 				}
 			],
 			"damageup": [
 				{
-					"x": 622,
-					"y": 57,
-					"z": 867
+					"x": 176,
+					"y": -114,
+					"z": 790
 				}
 			],
-			"armorup": [
+			"medkit": [
 				{
-					"x": 254,
-					"y": 824,
-					"z": 643
+					"x": 58,
+					"y": -483,
+					"z": 826
 				}
 			],
 			"nitro": [
 				{
-					"x": 517,
-					"y": 565,
-					"z": 762
+					"x": -117,
+					"y": 442,
+					"z": 645
 				}
 			]
 		},
-		"goldRegions": []
+		"goldRegions": [],
+		"capture": {
+			"account": "Danlino",
+			"battleId": "1f8b9a3f959a4a0b",
+			"mode": "DM",
+			"theme": "SUMMER",
+			"startedAt": "2026-10-04T20:33:16.168Z",
+			"listenMs": 120000,
+			"kickPeriodMs": 300000,
+			"esportDropTiming": true,
+			"privateBattle": true,
+			"finishedAt": "2026-10-04T20:35:17.803Z",
+			"drops": 4,
+			"goldRegions": 0,
+			"elapsedMs": 120008,
+			"stopReason": "tempo",
+			"capacity": 4,
+			"maxGapMs": 14999,
+			"firstDropMs": 17200,
+			"idleMs": 67847,
+			"timeline": [
+				17.2,
+				25.2,
+				40.2,
+				52.2
+			]
+		}
 	},
-	"updatedAt": "2026-10-04T15:23:21.168Z"
+	"updatedAt": "2026-10-04T21:54:53.803Z"
 }

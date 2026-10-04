@@ -4,11 +4,9 @@
 /**
  * Fechamento da captura de suprimentos. Idempotente. Duas passagens:
  *
- *  1. Reclassifica a razão de parada com a MESMA regra de silêncio da varredura, sem o piso de
- *     3 quedas. A varredura só declara teto depois de 3 quedas (para não fechar cedo); um mapa
- *     com capacidade 1 ou 2 fica até o tempo esgotar, marcado "tempo" — mas se o silêncio final
- *     for maior que o dobro do maior intervalo entre quedas (mínimo 20 s), as caixas pararam de
- *     cair e isso É o teto. map_island: quedas aos 15,9 s e 56,9 s, depois 233 s de silêncio.
+ *  1. Capacidade. Escuta >= 90 s cobriu a janela inteira de quedas (10–80 s), então
+ *     capacity = drops. Para sessões antigas com parada adaptativa, reclassifica "tempo" como
+ *     "teto" quando o silêncio final passou do dobro do maior intervalo (mínimo 20 s).
  *
  *  2. Migra o formato antigo (`drops` com count + `zones`/`region` agrupados) para `points`:
  *     cada queda vira um ponto, sem fundir. No sport cada ponto solta uma caixa e ela fica no
@@ -26,6 +24,7 @@ const { SPAWNS_DIR } = require("../lib/spawnStore");
 const dry = process.argv.includes("--dry-run");
 const IDLE_MARGIN = 1.0;
 const IDLE_FLOOR_MS = 20000;
+const WINDOW_COVERED_MS = 90000; // quedas acontecem entre 10 e 80 s; escuta >= 90 s viu tudo
 
 let files = [];
 try {
@@ -49,8 +48,16 @@ for (const f of files) {
 	const notas = [];
 	let mudou = false;
 
-	// 1. razão de parada
-	if (c.stopReason === "tempo" && c.drops > 0 && c.idleMs != null) {
+	// 1. capacidade / razão de parada
+	if ((c.elapsedMs || 0) >= WINDOW_COVERED_MS) {
+		// escuta cobriu a janela inteira de quedas (10–80 s): tudo que existe caiu
+		if (c.capacity !== c.drops) {
+			notas.push(`janela coberta (${Math.round(c.elapsedMs / 1000)}s): capacity = ${c.drops}`);
+			if (!dry) c.capacity = c.drops;
+			mudou = true;
+		}
+	} else if (c.stopReason === "tempo" && c.drops > 0 && c.idleMs != null) {
+		// sessões antigas com parada adaptativa
 		const exigido = Math.max((c.maxGapMs || 0) * (1 + IDLE_MARGIN), IDLE_FLOOR_MS);
 		if (c.idleMs > exigido) {
 			notas.push(`tempo→teto: ${Math.round(c.idleMs / 1000)}s de silêncio > ${Math.round(exigido / 1000)}s exigidos`);

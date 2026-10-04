@@ -2,111 +2,111 @@
 	"mapId": "map_rio",
 	"modes": {},
 	"bonus": {
-		"capture": {
-			"account": "camelCase",
-			"battleId": "b352ebe3e0963d35",
-			"mode": "DM",
-			"theme": "SUMMER",
-			"startedAt": "2026-10-04T07:50:06.071Z",
-			"listenMs": 290000,
-			"kickPeriodMs": 300000,
-			"esportDropTiming": true,
-			"privateBattle": true,
-			"finishedAt": "2026-10-04T07:52:21.964Z",
-			"drops": 11,
-			"goldRegions": 0,
-			"elapsedMs": 106023,
-			"stopReason": "teto",
-			"capacity": 11,
-			"maxGapMs": 13000,
-			"firstDropMs": 25000,
-			"idleMs": 26014,
-			"timeline": [
-				25,
-				28,
-				41,
-				50,
-				52,
-				57,
-				57,
-				70,
-				72,
-				77,
-				80
-			]
-		},
 		"types": {
-			"damageup": 4,
+			"armorup": 3,
 			"medkit": 2,
-			"nitro": 2,
-			"armorup": 3
+			"damageup": 4,
+			"nitro": 2
 		},
 		"points": {
-			"damageup": [
+			"armorup": [
 				{
-					"x": 5239,
-					"y": -103,
-					"z": 1986
+					"x": -202,
+					"y": -221,
+					"z": 1227
 				},
 				{
-					"x": -887,
-					"y": 2121,
-					"z": 2575
+					"x": -2613,
+					"y": -2940,
+					"z": 2785
 				},
 				{
-					"x": -5721,
-					"y": 229,
-					"z": 1496
-				},
-				{
-					"x": 446,
-					"y": -3575,
-					"z": 2056
+					"x": 539,
+					"y": 4599,
+					"z": 2058
 				}
 			],
 			"medkit": [
 				{
-					"x": -209,
-					"y": -7991,
-					"z": 1781
+					"x": -1592,
+					"y": 5064,
+					"z": 1242
 				},
 				{
-					"x": -1451,
-					"y": 5047,
-					"z": 1302
+					"x": -330,
+					"y": -7901,
+					"z": 1787
+				}
+			],
+			"damageup": [
+				{
+					"x": 5147,
+					"y": 3,
+					"z": 2000
+				},
+				{
+					"x": -1054,
+					"y": 2054,
+					"z": 2555
+				},
+				{
+					"x": 530,
+					"y": -3620,
+					"z": 2192
+				},
+				{
+					"x": -5726,
+					"y": 204,
+					"z": 1338
 				}
 			],
 			"nitro": [
 				{
-					"x": 3183,
-					"y": 6762,
-					"z": 1275
+					"x": 3242,
+					"y": 6828,
+					"z": 1321
 				},
 				{
-					"x": 3213,
-					"y": -6217,
-					"z": 1435
-				}
-			],
-			"armorup": [
-				{
-					"x": 431,
-					"y": 4494,
-					"z": 2040
-				},
-				{
-					"x": -2508,
-					"y": -3022,
-					"z": 2739
-				},
-				{
-					"x": -157,
-					"y": -231,
-					"z": 1219
+					"x": 3348,
+					"y": -6321,
+					"z": 1288
 				}
 			]
 		},
-		"goldRegions": []
+		"goldRegions": [],
+		"capture": {
+			"account": "camelCase",
+			"battleId": "f4d0812a13a28c5a",
+			"mode": "DM",
+			"theme": "SUMMER",
+			"startedAt": "2026-10-04T19:59:08.675Z",
+			"listenMs": 120000,
+			"kickPeriodMs": 300000,
+			"esportDropTiming": true,
+			"privateBattle": true,
+			"finishedAt": "2026-10-04T20:04:35.875Z",
+			"drops": 11,
+			"goldRegions": 0,
+			"elapsedMs": 120014,
+			"stopReason": "tempo",
+			"capacity": 11,
+			"maxGapMs": 25001,
+			"firstDropMs": 13100,
+			"idleMs": 43934,
+			"timeline": [
+				13.1,
+				14.1,
+				19.1,
+				20.1,
+				21.1,
+				46.1,
+				47.1,
+				58.1,
+				59.1,
+				59.1,
+				76.1
+			]
+		}
 	},
-	"updatedAt": "2026-10-04T15:23:21.186Z"
+	"updatedAt": "2026-10-04T21:54:53.824Z"
 }

@@ -2,93 +2,93 @@
 	"mapId": "map_magadan",
 	"modes": {},
 	"bonus": {
-		"capture": {
-			"account": "Danlino",
-			"battleId": "bb9c979f10a3f437",
-			"mode": "DM",
-			"theme": "SUMMER",
-			"startedAt": "2026-10-04T07:02:40.773Z",
-			"listenMs": 290000,
-			"kickPeriodMs": 300000,
-			"esportDropTiming": true,
-			"privateBattle": true,
-			"finishedAt": "2026-10-04T07:05:17.894Z",
-			"drops": 8,
-			"goldRegions": 0,
-			"elapsedMs": 116066,
-			"stopReason": "teto",
-			"capacity": 8,
-			"maxGapMs": 18003,
-			"firstDropMs": 13100,
-			"idleMs": 36919,
-			"timeline": [
-				13.1,
-				16.1,
-				21.1,
-				31.1,
-				39.1,
-				57.1,
-				74.1,
-				79.1
-			]
-		},
 		"types": {
 			"armorup": 2,
-			"medkit": 2,
 			"nitro": 2,
-			"damageup": 2
+			"damageup": 2,
+			"medkit": 2
 		},
 		"points": {
 			"armorup": [
 				{
-					"x": 3930,
-					"y": -4439,
-					"z": 1465
+					"x": -3385,
+					"y": 4013,
+					"z": 1451
 				},
 				{
-					"x": -3585,
-					"y": 4033,
-					"z": 1224
-				}
-			],
-			"medkit": [
-				{
-					"x": 321,
-					"y": -3787,
-					"z": 1262
-				},
-				{
-					"x": 241,
-					"y": 3322,
-					"z": 1329
+					"x": 3892,
+					"y": -4492,
+					"z": 1466
 				}
 			],
 			"nitro": [
 				{
-					"x": -2208,
-					"y": -281,
-					"z": 1498
+					"x": 2866,
+					"y": -201,
+					"z": 1490
 				},
 				{
-					"x": 2766,
-					"y": -350,
-					"z": 1257
+					"x": -2344,
+					"y": -222,
+					"z": 1393
 				}
 			],
 			"damageup": [
 				{
-					"x": 3920,
-					"y": 3909,
-					"z": 1462
+					"x": -3433,
+					"y": -4490,
+					"z": 1376
 				},
 				{
-					"x": -3415,
-					"y": -4381,
-					"z": 1322
+					"x": 3988,
+					"y": 3974,
+					"z": 1428
+				}
+			],
+			"medkit": [
+				{
+					"x": 183,
+					"y": 3300,
+					"z": 1291
+				},
+				{
+					"x": 170,
+					"y": -3744,
+					"z": 1472
 				}
 			]
 		},
-		"goldRegions": []
+		"goldRegions": [],
+		"capture": {
+			"account": "Danlino",
+			"battleId": "e477b74747c499f6",
+			"mode": "DM",
+			"theme": "SUMMER",
+			"startedAt": "2026-10-04T19:35:55.934Z",
+			"listenMs": 120000,
+			"kickPeriodMs": 300000,
+			"esportDropTiming": true,
+			"privateBattle": true,
+			"finishedAt": "2026-10-04T19:37:57.619Z",
+			"drops": 8,
+			"goldRegions": 0,
+			"elapsedMs": 120006,
+			"stopReason": "tempo",
+			"capacity": 8,
+			"maxGapMs": 11996,
+			"firstDropMs": 36400,
+			"idleMs": 41642,
+			"timeline": [
+				36.4,
+				40.4,
+				52.4,
+				55.4,
+				57.4,
+				69.4,
+				70.4,
+				78.4
+			]
+		}
 	},
-	"updatedAt": "2026-10-04T15:23:21.180Z"
+	"updatedAt": "2026-10-04T21:54:53.816Z"
 }

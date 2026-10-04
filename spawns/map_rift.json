@@ -2,57 +2,93 @@
 	"mapId": "map_rift",
 	"modes": {},
 	"bonus": {
-		"capture": {
-			"account": "Danlino",
-			"battleId": "43dc1aaf7f4c5741",
-			"mode": "DM",
-			"theme": "SUMMER",
-			"startedAt": "2026-10-04T09:35:38.876Z",
-			"listenMs": 290000,
-			"kickPeriodMs": 300000,
-			"esportDropTiming": true,
-			"privateBattle": true,
-			"finishedAt": "2026-10-04T09:36:37.329Z",
-			"drops": 3,
-			"goldRegions": 0,
-			"elapsedMs": 56465,
-			"stopReason": "teto",
-			"capacity": 3,
-			"maxGapMs": 9035,
-			"firstDropMs": 20200,
-			"idleMs": 20272,
-			"timeline": [
-				20.2,
-				27.2,
-				36.2
-			]
-		},
 		"types": {
 			"nitro": 2,
-			"damageup": 1
+			"armorup": 2,
+			"damageup": 2,
+			"medkit": 2
 		},
 		"points": {
 			"nitro": [
 				{
-					"x": -836,
-					"y": -92,
-					"z": 778
+					"x": -770,
+					"y": -1,
+					"z": 747
 				},
 				{
-					"x": 2201,
-					"y": -230,
-					"z": 616
+					"x": 2283,
+					"y": 62,
+					"z": 862
+				}
+			],
+			"armorup": [
+				{
+					"x": -2767,
+					"y": -4658,
+					"z": 1004
+				},
+				{
+					"x": 3707,
+					"y": 4308,
+					"z": 1076
 				}
 			],
 			"damageup": [
 				{
-					"x": -2697,
-					"y": 4483,
-					"z": 981
+					"x": 4327,
+					"y": -4678,
+					"z": 1034
+				},
+				{
+					"x": -2860,
+					"y": 4566,
+					"z": 1180
+				}
+			],
+			"medkit": [
+				{
+					"x": 3732,
+					"y": -481,
+					"z": 2501
+				},
+				{
+					"x": -2195,
+					"y": -22,
+					"z": 2536
 				}
 			]
 		},
-		"goldRegions": []
+		"goldRegions": [],
+		"capture": {
+			"account": "Danlino",
+			"battleId": "80514bf1a581590b",
+			"mode": "DM",
+			"theme": "SUMMER",
+			"startedAt": "2026-10-04T18:35:02.149Z",
+			"listenMs": 120000,
+			"kickPeriodMs": 300000,
+			"esportDropTiming": true,
+			"privateBattle": true,
+			"finishedAt": "2026-10-04T18:37:03.897Z",
+			"drops": 8,
+			"goldRegions": 0,
+			"elapsedMs": 120012,
+			"stopReason": "tempo",
+			"capacity": 8,
+			"maxGapMs": 30002,
+			"firstDropMs": 15100,
+			"idleMs": 47884,
+			"timeline": [
+				15.1,
+				45.1,
+				47.1,
+				48.1,
+				51.1,
+				54.1,
+				68.1,
+				72.1
+			]
+		}
 	},
-	"updatedAt": "2026-10-04T15:23:21.186Z"
+	"updatedAt": "2026-10-04T21:54:53.824Z"
 }

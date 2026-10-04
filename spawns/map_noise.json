@@ -2,87 +2,87 @@
 	"mapId": "map_noise",
 	"modes": {},
 	"bonus": {
-		"capture": {
-			"account": "Danlino",
-			"battleId": "254f2bd2fb1efb8e",
-			"mode": "DM",
-			"theme": "SUMMER",
-			"startedAt": "2026-10-04T08:40:06.037Z",
-			"listenMs": 290000,
-			"kickPeriodMs": 300000,
-			"esportDropTiming": true,
-			"privateBattle": true,
-			"finishedAt": "2026-10-04T08:41:39.458Z",
-			"drops": 7,
-			"goldRegions": 0,
-			"elapsedMs": 91847,
-			"stopReason": "teto",
-			"capacity": 7,
-			"maxGapMs": 10999,
-			"firstDropMs": 37200,
-			"idleMs": 22608,
-			"timeline": [
-				37.2,
-				43.2,
-				46.2,
-				48.2,
-				59.2,
-				69.2,
-				69.2
-			]
-		},
 		"types": {
+			"armorup": 2,
 			"nitro": 2,
 			"damageup": 2,
-			"medkit": 1,
-			"armorup": 2
+			"medkit": 1
 		},
 		"points": {
-			"nitro": [
+			"armorup": [
 				{
-					"x": 76,
-					"y": -1706,
-					"z": 861
+					"x": 2165,
+					"y": -1469,
+					"z": 1788
 				},
 				{
-					"x": 5725,
-					"y": 2524,
-					"z": 3637
+					"x": 2929,
+					"y": 4375,
+					"z": 3303
+				}
+			],
+			"nitro": [
+				{
+					"x": 137,
+					"y": -1819,
+					"z": 882
+				},
+				{
+					"x": 5767,
+					"y": 2898,
+					"z": 3641
 				}
 			],
 			"damageup": [
 				{
-					"x": 6196,
-					"y": 66,
-					"z": 2878
+					"x": -640,
+					"y": 12,
+					"z": 2089
 				},
 				{
-					"x": -428,
-					"y": 169,
-					"z": 2090
+					"x": 5938,
+					"y": 386,
+					"z": 2938
 				}
 			],
 			"medkit": [
 				{
-					"x": 1629,
-					"y": 1125,
-					"z": 2135
-				}
-			],
-			"armorup": [
-				{
-					"x": 1752,
-					"y": -1532,
-					"z": 1579
-				},
-				{
-					"x": 2866,
-					"y": 4348,
-					"z": 3465
+					"x": 1703,
+					"y": 1092,
+					"z": 2119
 				}
 			]
 		},
-		"goldRegions": []
+		"goldRegions": [],
+		"capture": {
+			"account": "Danlino",
+			"battleId": "b653799ec8c1a2bd",
+			"mode": "DM",
+			"theme": "SUMMER",
+			"startedAt": "2026-10-04T20:46:53.387Z",
+			"listenMs": 120000,
+			"kickPeriodMs": 300000,
+			"esportDropTiming": true,
+			"privateBattle": true,
+			"finishedAt": "2026-10-04T20:52:22.650Z",
+			"drops": 7,
+			"goldRegions": 0,
+			"elapsedMs": 120002,
+			"stopReason": "tempo",
+			"capacity": 7,
+			"maxGapMs": 23000,
+			"firstDropMs": 17300,
+			"idleMs": 43674,
+			"timeline": [
+				17.3,
+				23.3,
+				32.3,
+				33.3,
+				48.3,
+				71.3,
+				76.3
+			]
+		}
 	},
-	"updatedAt": "2026-10-04T15:23:21.182Z"
+	"updatedAt": "2026-10-04T21:54:53.818Z"
 }

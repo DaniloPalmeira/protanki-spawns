@@ -2,81 +2,81 @@
 	"mapId": "map_boombox",
 	"modes": {},
 	"bonus": {
-		"capture": {
-			"account": "camelCase",
-			"battleId": "b3e36d1de80090c9",
-			"mode": "DM",
-			"theme": "SUMMER",
-			"startedAt": "2026-10-04T07:59:14.112Z",
-			"listenMs": 290000,
-			"kickPeriodMs": 300000,
-			"esportDropTiming": true,
-			"privateBattle": true,
-			"finishedAt": "2026-10-04T08:01:49.335Z",
-			"drops": 6,
-			"goldRegions": 0,
-			"elapsedMs": 114090,
-			"stopReason": "teto",
-			"capacity": 6,
-			"maxGapMs": 20000,
-			"firstDropMs": 23800,
-			"idleMs": 40283,
-			"timeline": [
-				23.8,
-				36.8,
-				37.8,
-				50.8,
-				53.8,
-				73.8
-			]
-		},
 		"types": {
 			"medkit": 2,
-			"armorup": 1,
 			"nitro": 2,
-			"damageup": 1
+			"damageup": 1,
+			"armorup": 1
 		},
 		"points": {
 			"medkit": [
 				{
-					"x": -2463,
-					"y": -2588,
-					"z": 1765
+					"x": -2540,
+					"y": -2504,
+					"z": 1606
 				},
 				{
-					"x": 1686,
-					"y": 4175,
-					"z": 1777
-				}
-			],
-			"armorup": [
-				{
-					"x": 234,
-					"y": 2112,
-					"z": 1880
+					"x": 1673,
+					"y": 4195,
+					"z": 1709
 				}
 			],
 			"nitro": [
 				{
-					"x": -1485,
-					"y": 4406,
-					"z": 1796
+					"x": 825,
+					"y": -2853,
+					"z": 1793
 				},
 				{
-					"x": 724,
-					"y": -2637,
-					"z": 1580
+					"x": -1556,
+					"y": 4476,
+					"z": 1719
 				}
 			],
 			"damageup": [
 				{
-					"x": -1870,
-					"y": -1130,
-					"z": 1836
+					"x": -1973,
+					"y": -1269,
+					"z": 1961
+				}
+			],
+			"armorup": [
+				{
+					"x": 223,
+					"y": 1984,
+					"z": 1962
 				}
 			]
 		},
-		"goldRegions": []
+		"goldRegions": [],
+		"capture": {
+			"account": "camelCase",
+			"battleId": "3b67d8eebbb06404",
+			"mode": "DM",
+			"theme": "SUMMER",
+			"startedAt": "2026-10-04T20:08:41.974Z",
+			"listenMs": 120000,
+			"kickPeriodMs": 300000,
+			"esportDropTiming": true,
+			"privateBattle": true,
+			"finishedAt": "2026-10-04T20:14:09.097Z",
+			"drops": 6,
+			"goldRegions": 0,
+			"elapsedMs": 120014,
+			"stopReason": "tempo",
+			"capacity": 6,
+			"maxGapMs": 22000,
+			"firstDropMs": 18900,
+			"idleMs": 41140,
+			"timeline": [
+				18.9,
+				25.9,
+				33.9,
+				37.9,
+				56.9,
+				78.9
+			]
+		}
 	},
-	"updatedAt": "2026-10-04T15:23:21.161Z"
+	"updatedAt": "2026-10-04T21:54:53.796Z"
 }

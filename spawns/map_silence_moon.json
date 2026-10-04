@@ -2,57 +2,87 @@
 	"mapId": "map_silence_moon",
 	"modes": {},
 	"bonus": {
-		"capture": {
-			"account": "Danlino",
-			"battleId": "dd7d37f847507ca8",
-			"mode": "DM",
-			"theme": "SPACE",
-			"startedAt": "2026-10-04T09:44:36.915Z",
-			"listenMs": 290000,
-			"kickPeriodMs": 300000,
-			"esportDropTiming": true,
-			"privateBattle": true,
-			"finishedAt": "2026-10-04T09:45:20.985Z",
-			"drops": 3,
-			"goldRegions": 0,
-			"elapsedMs": 42268,
-			"stopReason": "teto",
-			"capacity": 3,
-			"maxGapMs": 5996,
-			"firstDropMs": 14300,
-			"idleMs": 20984,
-			"timeline": [
-				14.3,
-				20.3,
-				21.3
-			]
-		},
 		"types": {
-			"nitro": 1,
-			"armorup": 2
+			"damageup": 1,
+			"armorup": 3,
+			"medkit": 1,
+			"nitro": 2
 		},
 		"points": {
-			"nitro": [
+			"damageup": [
 				{
-					"x": -1379,
-					"y": -8071,
-					"z": 3573
+					"x": 2277,
+					"y": -4855,
+					"z": 2161
 				}
 			],
 			"armorup": [
 				{
-					"x": -2364,
-					"y": -4722,
-					"z": 3550
+					"x": 2493,
+					"y": -1335,
+					"z": 2733
 				},
 				{
-					"x": -2028,
-					"y": -7768,
-					"z": 3498
+					"x": -2519,
+					"y": -5375,
+					"z": 3357
+				},
+				{
+					"x": -2252,
+					"y": -8228,
+					"z": 3339
+				}
+			],
+			"medkit": [
+				{
+					"x": -370,
+					"y": 517,
+					"z": 2908
+				}
+			],
+			"nitro": [
+				{
+					"x": 133,
+					"y": -1317,
+					"z": 2737
+				},
+				{
+					"x": -1402,
+					"y": -7787,
+					"z": 3575
 				}
 			]
 		},
-		"goldRegions": []
+		"goldRegions": [],
+		"capture": {
+			"account": "Danlino",
+			"battleId": "873723edab198d5e",
+			"mode": "DM",
+			"theme": "SPACE",
+			"startedAt": "2026-10-04T21:51:43.840Z",
+			"listenMs": 120000,
+			"kickPeriodMs": 300000,
+			"esportDropTiming": true,
+			"privateBattle": true,
+			"finishedAt": "2026-10-04T21:53:45.606Z",
+			"drops": 7,
+			"goldRegions": 0,
+			"elapsedMs": 120003,
+			"stopReason": "tempo",
+			"capacity": 7,
+			"maxGapMs": 14999,
+			"firstDropMs": 11500,
+			"idleMs": 47542,
+			"timeline": [
+				11.5,
+				17.5,
+				24.5,
+				39.5,
+				49.5,
+				61.5,
+				72.5
+			]
+		}
 	},
-	"updatedAt": "2026-10-04T15:23:21.191Z"
+	"updatedAt": "2026-10-04T21:54:53.827Z"
 }

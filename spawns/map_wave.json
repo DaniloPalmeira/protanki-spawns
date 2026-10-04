@@ -2,66 +2,66 @@
 	"mapId": "map_wave",
 	"modes": {},
 	"bonus": {
-		"capture": {
-			"account": "Danlino",
-			"battleId": "fa2d928e54c05508",
-			"mode": "DM",
-			"theme": "SUMMER",
-			"startedAt": "2026-10-04T07:42:49.553Z",
-			"listenMs": 290000,
-			"kickPeriodMs": 300000,
-			"esportDropTiming": true,
-			"privateBattle": true,
-			"finishedAt": "2026-10-04T07:44:14.049Z",
-			"drops": 4,
-			"goldRegions": 0,
-			"elapsedMs": 82801,
-			"stopReason": "teto",
-			"capacity": 4,
-			"maxGapMs": 16998,
-			"firstDropMs": 14700,
-			"idleMs": 34082,
-			"timeline": [
-				14.7,
-				26.7,
-				43.7,
-				48.7
-			]
-		},
 		"types": {
-			"nitro": 2,
+			"damageup": 1,
 			"armorup": 1,
-			"damageup": 1
+			"nitro": 2
 		},
 		"points": {
-			"nitro": [
+			"damageup": [
 				{
-					"x": 8423,
-					"y": 1402,
-					"z": 737
-				},
-				{
-					"x": -3278,
-					"y": 1665,
-					"z": 898
+					"x": 1881,
+					"y": 341,
+					"z": 1099
 				}
 			],
 			"armorup": [
 				{
-					"x": 1858,
-					"y": 2790,
-					"z": 937
+					"x": 2161,
+					"y": 3232,
+					"z": 903
 				}
 			],
-			"damageup": [
+			"nitro": [
 				{
-					"x": 2095,
-					"y": -166,
-					"z": 1025
+					"x": -3141,
+					"y": 1322,
+					"z": 804
+				},
+				{
+					"x": 8040,
+					"y": 1574,
+					"z": 785
 				}
 			]
 		},
-		"goldRegions": []
+		"goldRegions": [],
+		"capture": {
+			"account": "Danlino",
+			"battleId": "fc6beacb33c3add2",
+			"mode": "DM",
+			"theme": "SUMMER",
+			"startedAt": "2026-10-04T19:55:02.814Z",
+			"listenMs": 120000,
+			"kickPeriodMs": 300000,
+			"esportDropTiming": true,
+			"privateBattle": true,
+			"finishedAt": "2026-10-04T19:57:04.511Z",
+			"drops": 4,
+			"goldRegions": 0,
+			"elapsedMs": 120007,
+			"stopReason": "tempo",
+			"capacity": 4,
+			"maxGapMs": 12998,
+			"firstDropMs": 38500,
+			"idleMs": 60508,
+			"timeline": [
+				38.5,
+				39.5,
+				46.5,
+				59.5
+			]
+		}
 	},
-	"updatedAt": "2026-10-04T15:23:21.196Z"
+	"updatedAt": "2026-10-04T21:54:53.832Z"
 }

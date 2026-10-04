@@ -2,81 +2,87 @@
 	"mapId": "map_molotov",
 	"modes": {},
 	"bonus": {
-		"capture": {
-			"account": "Danlino",
-			"battleId": "f8bff1157732377e",
-			"mode": "DM",
-			"theme": "SUMMER",
-			"startedAt": "2026-10-04T07:05:17.898Z",
-			"listenMs": 290000,
-			"kickPeriodMs": 300000,
-			"esportDropTiming": true,
-			"privateBattle": true,
-			"finishedAt": "2026-10-04T07:06:32.242Z",
-			"drops": 6,
-			"goldRegions": 0,
-			"elapsedMs": 72590,
-			"stopReason": "teto",
-			"capacity": 6,
-			"maxGapMs": 9999,
-			"firstDropMs": 31400,
-			"idleMs": 20149,
-			"timeline": [
-				31.4,
-				36.4,
-				46.4,
-				47.4,
-				48.4,
-				52.4
-			]
-		},
 		"types": {
-			"armorup": 1,
-			"nitro": 2,
 			"damageup": 2,
+			"armorup": 2,
+			"nitro": 2,
 			"medkit": 1
 		},
 		"points": {
+			"damageup": [
+				{
+					"x": 3225,
+					"y": 1721,
+					"z": 1293
+				},
+				{
+					"x": -4305,
+					"y": -2888,
+					"z": 1239
+				}
+			],
 			"armorup": [
 				{
-					"x": 4877,
-					"y": -1452,
-					"z": 1539
+					"x": -3744,
+					"y": 1514,
+					"z": 1291
+				},
+				{
+					"x": 4526,
+					"y": -1495,
+					"z": 1596
 				}
 			],
 			"nitro": [
 				{
-					"x": 2020,
-					"y": -5994,
-					"z": 1574
+					"x": 1755,
+					"y": -5590,
+					"z": 1519
 				},
 				{
-					"x": 281,
-					"y": 5131,
-					"z": 1397
-				}
-			],
-			"damageup": [
-				{
-					"x": -4002,
-					"y": -2577,
-					"z": 1348
-				},
-				{
-					"x": 3250,
-					"y": 1601,
-					"z": 1390
+					"x": 466,
+					"y": 4902,
+					"z": 1321
 				}
 			],
 			"medkit": [
 				{
-					"x": 6650,
-					"y": 2032,
-					"z": 1964
+					"x": 6685,
+					"y": 2162,
+					"z": 1956
 				}
 			]
 		},
-		"goldRegions": []
+		"goldRegions": [],
+		"capture": {
+			"account": "Danlino",
+			"battleId": "5e9ee6bf98877e11",
+			"mode": "DM",
+			"theme": "SUMMER",
+			"startedAt": "2026-10-04T19:37:57.625Z",
+			"listenMs": 120000,
+			"kickPeriodMs": 300000,
+			"esportDropTiming": true,
+			"privateBattle": true,
+			"finishedAt": "2026-10-04T19:39:59.511Z",
+			"drops": 7,
+			"goldRegions": 0,
+			"elapsedMs": 120008,
+			"stopReason": "tempo",
+			"capacity": 7,
+			"maxGapMs": 18002,
+			"firstDropMs": 33600,
+			"idleMs": 46361,
+			"timeline": [
+				33.6,
+				42.6,
+				50.6,
+				51.6,
+				69.6,
+				73.6,
+				73.6
+			]
+		}
 	},
-	"updatedAt": "2026-10-04T15:23:21.181Z"
+	"updatedAt": "2026-10-04T21:54:53.818Z"
 }

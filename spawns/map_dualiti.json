@@ -2,81 +2,81 @@
 	"mapId": "map_dualiti",
 	"modes": {},
 	"bonus": {
-		"capture": {
-			"account": "Danlino",
-			"battleId": "538bd97f882b4a38",
-			"mode": "DM",
-			"theme": "SUMMER",
-			"startedAt": "2026-10-04T06:53:25.264Z",
-			"listenMs": 290000,
-			"kickPeriodMs": 300000,
-			"esportDropTiming": true,
-			"privateBattle": true,
-			"finishedAt": "2026-10-04T06:56:40.740Z",
-			"drops": 6,
-			"goldRegions": 0,
-			"elapsedMs": 137208,
-			"stopReason": "teto",
-			"capacity": 6,
-			"maxGapMs": 29001,
-			"firstDropMs": 18400,
-			"idleMs": 58759,
-			"timeline": [
-				18.4,
-				28.4,
-				57.4,
-				60.5,
-				72.5,
-				78.4
-			]
-		},
 		"types": {
+			"medkit": 2,
 			"nitro": 2,
-			"damageup": 1,
 			"armorup": 1,
-			"medkit": 2
+			"damageup": 1
 		},
 		"points": {
-			"nitro": [
+			"medkit": [
 				{
-					"x": -481,
-					"y": -3624,
-					"z": 2100
+					"x": 1540,
+					"y": 1808,
+					"z": 1938
 				},
 				{
-					"x": -534,
-					"y": 3600,
-					"z": 1929
+					"x": -2391,
+					"y": -1711,
+					"z": 2027
 				}
 			],
-			"damageup": [
+			"nitro": [
 				{
-					"x": -3129,
-					"y": 650,
-					"z": 2052
+					"x": -553,
+					"y": 3564,
+					"z": 1806
+				},
+				{
+					"x": -414,
+					"y": -3612,
+					"z": 1837
 				}
 			],
 			"armorup": [
 				{
-					"x": 2250,
-					"y": -737,
-					"z": 1901
+					"x": 2261,
+					"y": -746,
+					"z": 2016
 				}
 			],
-			"medkit": [
+			"damageup": [
 				{
-					"x": -2405,
-					"y": -1828,
-					"z": 1945
-				},
-				{
-					"x": 1381,
-					"y": 1810,
-					"z": 1899
+					"x": -3282,
+					"y": 865,
+					"z": 1981
 				}
 			]
 		},
-		"goldRegions": []
+		"goldRegions": [],
+		"capture": {
+			"account": "Danlino",
+			"battleId": "8a343494f39e1109",
+			"mode": "DM",
+			"theme": "SUMMER",
+			"startedAt": "2026-10-04T19:18:51.199Z",
+			"listenMs": 120000,
+			"kickPeriodMs": 300000,
+			"esportDropTiming": true,
+			"privateBattle": true,
+			"finishedAt": "2026-10-04T19:20:54.148Z",
+			"drops": 6,
+			"goldRegions": 0,
+			"elapsedMs": 120011,
+			"stopReason": "tempo",
+			"capacity": 6,
+			"maxGapMs": 25993,
+			"firstDropMs": 10900,
+			"idleMs": 73144,
+			"timeline": [
+				10.9,
+				12.9,
+				38.9,
+				40.9,
+				43.9,
+				46.9
+			]
+		}
 	},
-	"updatedAt": "2026-10-04T15:23:21.168Z"
+	"updatedAt": "2026-10-04T21:54:53.803Z"
 }

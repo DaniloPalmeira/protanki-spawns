@@ -2,87 +2,87 @@
 	"mapId": "map_shortbridge",
 	"modes": {},
 	"bonus": {
-		"capture": {
-			"account": "Danlino",
-			"battleId": "e1fcf1978b65d066",
-			"mode": "DM",
-			"theme": "SUMMER",
-			"startedAt": "2026-10-04T07:33:23.133Z",
-			"listenMs": 290000,
-			"kickPeriodMs": 300000,
-			"esportDropTiming": true,
-			"privateBattle": true,
-			"finishedAt": "2026-10-04T07:35:03.563Z",
-			"drops": 7,
-			"goldRegions": 0,
-			"elapsedMs": 98890,
-			"stopReason": "teto",
-			"capacity": 7,
-			"maxGapMs": 14000,
-			"firstDropMs": 14200,
-			"idleMs": 28713,
-			"timeline": [
-				14.2,
-				25.2,
-				27.2,
-				36.2,
-				49.2,
-				63.2,
-				70.2
-			]
-		},
 		"types": {
 			"armorup": 2,
-			"nitro": 2,
 			"damageup": 2,
+			"nitro": 2,
 			"medkit": 1
 		},
 		"points": {
 			"armorup": [
 				{
-					"x": 4303,
-					"y": -2989,
-					"z": 1269
+					"x": 4172,
+					"y": -3088,
+					"z": 1380
 				},
 				{
-					"x": 1742,
-					"y": 2915,
-					"z": 1321
-				}
-			],
-			"nitro": [
-				{
-					"x": 9052,
-					"y": 67,
-					"z": 1142
-				},
-				{
-					"x": -3052,
-					"y": 6,
-					"z": 1184
+					"x": 1713,
+					"y": 3116,
+					"z": 1385
 				}
 			],
 			"damageup": [
 				{
-					"x": -181,
-					"y": -1160,
-					"z": 1731
+					"x": 6234,
+					"y": 1211,
+					"z": 1663
 				},
 				{
-					"x": 6177,
-					"y": 1356,
-					"z": 1668
+					"x": -203,
+					"y": -1329,
+					"z": 1669
+				}
+			],
+			"nitro": [
+				{
+					"x": -3012,
+					"y": -34,
+					"z": 917
+				},
+				{
+					"x": 8915,
+					"y": -118,
+					"z": 1176
 				}
 			],
 			"medkit": [
 				{
-					"x": 3049,
-					"y": -77,
-					"z": 2162
+					"x": 2914,
+					"y": -49,
+					"z": 2279
 				}
 			]
 		},
-		"goldRegions": []
+		"goldRegions": [],
+		"capture": {
+			"account": "Danlino",
+			"battleId": "0ba835797b209be2",
+			"mode": "DM",
+			"theme": "SUMMER",
+			"startedAt": "2026-10-04T19:39:59.515Z",
+			"listenMs": 120000,
+			"kickPeriodMs": 300000,
+			"esportDropTiming": true,
+			"privateBattle": true,
+			"finishedAt": "2026-10-04T19:45:29.566Z",
+			"drops": 7,
+			"goldRegions": 0,
+			"elapsedMs": 120009,
+			"stopReason": "tempo",
+			"capacity": 7,
+			"maxGapMs": 25002,
+			"firstDropMs": 18500,
+			"idleMs": 51532,
+			"timeline": [
+				18.5,
+				23.5,
+				29.5,
+				31.5,
+				39.5,
+				43.5,
+				68.5
+			]
+		}
 	},
-	"updatedAt": "2026-10-04T15:23:21.189Z"
+	"updatedAt": "2026-10-04T21:54:53.826Z"
 }

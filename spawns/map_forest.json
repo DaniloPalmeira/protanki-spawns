@@ -2,105 +2,105 @@
 	"mapId": "map_forest",
 	"modes": {},
 	"bonus": {
-		"capture": {
-			"account": "Danlino",
-			"battleId": "b307a507f9dc632c",
-			"mode": "DM",
-			"theme": "SUMMER",
-			"startedAt": "2026-10-04T09:00:27.485Z",
-			"listenMs": 290000,
-			"kickPeriodMs": 300000,
-			"esportDropTiming": true,
-			"privateBattle": true,
-			"finishedAt": "2026-10-04T09:02:13.436Z",
-			"drops": 10,
-			"goldRegions": 0,
-			"elapsedMs": 103995,
-			"stopReason": "teto",
-			"capacity": 10,
-			"maxGapMs": 17001,
-			"firstDropMs": 15500,
-			"idleMs": 34450,
-			"timeline": [
-				15.5,
-				21.5,
-				21.5,
-				38.5,
-				41.5,
-				50.5,
-				55.5,
-				59.5,
-				62.5,
-				69.5
-			]
-		},
 		"types": {
-			"nitro": 4,
-			"medkit": 2,
 			"armorup": 2,
+			"medkit": 2,
+			"nitro": 4,
 			"damageup": 2
 		},
 		"points": {
-			"nitro": [
+			"armorup": [
 				{
-					"x": -7281,
-					"y": 2321,
-					"z": 1170
+					"x": -2296,
+					"y": -2762,
+					"z": 1774
 				},
 				{
-					"x": -150,
-					"y": -7653,
-					"z": 1008
-				},
-				{
-					"x": 1328,
-					"y": 8627,
-					"z": 1100
-				},
-				{
-					"x": 6568,
-					"y": -1372,
-					"z": 1019
+					"x": 3030,
+					"y": 3139,
+					"z": 1780
 				}
 			],
 			"medkit": [
 				{
-					"x": 2974,
-					"y": 4627,
-					"z": 1636
+					"x": -3205,
+					"y": -1245,
+					"z": 1677
 				},
 				{
-					"x": -3372,
-					"y": -1195,
-					"z": 1628
+					"x": 2908,
+					"y": 4871,
+					"z": 1544
 				}
 			],
-			"armorup": [
+			"nitro": [
 				{
-					"x": -2356,
-					"y": -2800,
-					"z": 1774
+					"x": 6599,
+					"y": -1174,
+					"z": 969
 				},
 				{
-					"x": 3102,
-					"y": 3247,
-					"z": 1671
+					"x": -353,
+					"y": -7706,
+					"z": 900
+				},
+				{
+					"x": -7267,
+					"y": 2281,
+					"z": 1068
+				},
+				{
+					"x": 1249,
+					"y": 8789,
+					"z": 990
 				}
 			],
 			"damageup": [
 				{
-					"x": -2631,
-					"y": 3911,
-					"z": 1655
+					"x": 2904,
+					"y": -2861,
+					"z": 1771
 				},
 				{
-					"x": 2971,
-					"y": -2800,
-					"z": 1515
+					"x": -2671,
+					"y": 3988,
+					"z": 1508
 				}
 			]
 		},
-		"goldRegions": []
+		"goldRegions": [],
+		"capture": {
+			"account": "Danlino",
+			"battleId": "fd35014e470ca0a2",
+			"mode": "DM",
+			"theme": "SUMMER",
+			"startedAt": "2026-10-04T21:11:29.109Z",
+			"listenMs": 120000,
+			"kickPeriodMs": 300000,
+			"esportDropTiming": true,
+			"privateBattle": true,
+			"finishedAt": "2026-10-04T21:13:30.765Z",
+			"drops": 10,
+			"goldRegions": 0,
+			"elapsedMs": 120006,
+			"stopReason": "tempo",
+			"capacity": 10,
+			"maxGapMs": 14999,
+			"firstDropMs": 10200,
+			"idleMs": 58817,
+			"timeline": [
+				10.2,
+				16.2,
+				16.2,
+				31.2,
+				41.2,
+				43.2,
+				46.2,
+				53.2,
+				58.2,
+				61.2
+			]
+		}
 	},
-	"updatedAt": "2026-10-04T15:23:21.171Z"
+	"updatedAt": "2026-10-04T21:54:53.808Z"
 }

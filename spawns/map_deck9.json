@@ -2,34 +2,6 @@
 	"mapId": "map_deck9",
 	"modes": {},
 	"bonus": {
-		"capture": {
-			"account": "Danlino",
-			"battleId": "757a15a3bb172aae",
-			"mode": "DM",
-			"theme": "SUMMER",
-			"startedAt": "2026-10-04T07:23:48.731Z",
-			"listenMs": 290000,
-			"kickPeriodMs": 300000,
-			"esportDropTiming": true,
-			"privateBattle": true,
-			"finishedAt": "2026-10-04T07:25:38.647Z",
-			"drops": 6,
-			"goldRegions": 0,
-			"elapsedMs": 108058,
-			"stopReason": "teto",
-			"capacity": 6,
-			"maxGapMs": 19000,
-			"firstDropMs": 10400,
-			"idleMs": 38649,
-			"timeline": [
-				10.4,
-				23.4,
-				25.4,
-				33.4,
-				50.4,
-				69.4
-			]
-		},
 		"types": {
 			"damageup": 2,
 			"medkit": 2,
@@ -38,42 +10,70 @@
 		"points": {
 			"damageup": [
 				{
-					"x": 4102,
-					"y": 3441,
-					"z": 731
+					"x": -2751,
+					"y": -558,
+					"z": 263
 				},
 				{
-					"x": -1695,
-					"y": -374,
-					"z": 437
+					"x": 3933,
+					"y": 3354,
+					"z": 738
 				}
 			],
 			"medkit": [
 				{
-					"x": -3049,
-					"y": 2223,
-					"z": 165
+					"x": -88,
+					"y": 1943,
+					"z": 1298
 				},
 				{
-					"x": -483,
-					"y": 1622,
-					"z": 1472
+					"x": -2950,
+					"y": 2317,
+					"z": 379
 				}
 			],
 			"armorup": [
 				{
-					"x": -1694,
-					"y": 4144,
-					"z": 286
+					"x": -2454,
+					"y": 3754,
+					"z": 232
 				},
 				{
-					"x": 3947,
-					"y": 40,
-					"z": 893
+					"x": 3932,
+					"y": 79,
+					"z": 624
 				}
 			]
 		},
-		"goldRegions": []
+		"goldRegions": [],
+		"capture": {
+			"account": "Danlino",
+			"battleId": "15ccd9ace7c6d5a2",
+			"mode": "DM",
+			"theme": "SUMMER",
+			"startedAt": "2026-10-04T19:16:49.399Z",
+			"listenMs": 120000,
+			"kickPeriodMs": 300000,
+			"esportDropTiming": true,
+			"privateBattle": true,
+			"finishedAt": "2026-10-04T19:18:51.194Z",
+			"drops": 6,
+			"goldRegions": 0,
+			"elapsedMs": 120011,
+			"stopReason": "tempo",
+			"capacity": 6,
+			"maxGapMs": 27012,
+			"firstDropMs": 19900,
+			"idleMs": 43112,
+			"timeline": [
+				19.9,
+				22.9,
+				26.9,
+				32.9,
+				59.9,
+				76.9
+			]
+		}
 	},
-	"updatedAt": "2026-10-04T15:23:21.167Z"
+	"updatedAt": "2026-10-04T21:54:53.802Z"
 }

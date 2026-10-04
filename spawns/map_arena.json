@@ -2,87 +2,87 @@
 	"mapId": "map_arena",
 	"modes": {},
 	"bonus": {
-		"capture": {
-			"account": "Danlino",
-			"battleId": "13056fbdb1ab8b53",
-			"mode": "DM",
-			"theme": "SUMMER",
-			"startedAt": "2026-10-04T06:40:22.549Z",
-			"listenMs": 290000,
-			"kickPeriodMs": 300000,
-			"esportDropTiming": true,
-			"privateBattle": true,
-			"finishedAt": "2026-10-04T06:41:37.919Z",
-			"drops": 7,
-			"goldRegions": 0,
-			"elapsedMs": 73733,
-			"stopReason": "teto",
-			"capacity": 7,
-			"maxGapMs": 8000,
-			"firstDropMs": 23800,
-			"idleMs": 20951,
-			"timeline": [
-				23.8,
-				27.8,
-				33.8,
-				35.8,
-				39.8,
-				47.8,
-				52.8
-			]
-		},
 		"types": {
-			"medkit": 1,
 			"armorup": 2,
 			"damageup": 2,
-			"nitro": 2
+			"nitro": 2,
+			"medkit": 1
 		},
 		"points": {
-			"medkit": [
-				{
-					"x": 2099,
-					"y": 1921,
-					"z": 750
-				}
-			],
 			"armorup": [
 				{
-					"x": 2501,
-					"y": 744,
-					"z": 1928
+					"x": 2801,
+					"y": 906,
+					"z": 1975
 				},
 				{
-					"x": -1078,
-					"y": 956,
-					"z": 2041
+					"x": -1070,
+					"y": 825,
+					"z": 2012
 				}
 			],
 			"damageup": [
 				{
-					"x": 654,
-					"y": -1295,
-					"z": 2075
+					"x": 864,
+					"y": -1436,
+					"z": 1990
 				},
 				{
-					"x": 708,
-					"y": 2783,
-					"z": 1967
+					"x": 592,
+					"y": 2838,
+					"z": 1973
 				}
 			],
 			"nitro": [
 				{
-					"x": -293,
-					"y": -2669,
-					"z": 837
+					"x": -2779,
+					"y": -496,
+					"z": 620
 				},
 				{
-					"x": -2743,
-					"y": -31,
-					"z": 791
+					"x": -424,
+					"y": -2802,
+					"z": 673
+				}
+			],
+			"medkit": [
+				{
+					"x": 1858,
+					"y": 1815,
+					"z": 757
 				}
 			]
 		},
-		"goldRegions": []
+		"goldRegions": [],
+		"capture": {
+			"account": "Danlino",
+			"battleId": "8e1c04fc36015975",
+			"mode": "DM",
+			"theme": "SUMMER",
+			"startedAt": "2026-10-04T18:55:41.233Z",
+			"listenMs": 120000,
+			"kickPeriodMs": 300000,
+			"esportDropTiming": true,
+			"privateBattle": true,
+			"finishedAt": "2026-10-04T18:57:42.905Z",
+			"drops": 7,
+			"goldRegions": 0,
+			"elapsedMs": 120004,
+			"stopReason": "tempo",
+			"capacity": 7,
+			"maxGapMs": 23000,
+			"firstDropMs": 17100,
+			"idleMs": 50929,
+			"timeline": [
+				17.1,
+				19.1,
+				42.1,
+				60.1,
+				66.1,
+				68.1,
+				69.1
+			]
+		}
 	},
-	"updatedAt": "2026-10-04T15:23:21.158Z"
+	"updatedAt": "2026-10-04T21:54:53.793Z"
 }

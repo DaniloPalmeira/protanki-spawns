@@ -2,123 +2,123 @@
 	"mapId": "map_iran",
 	"modes": {},
 	"bonus": {
-		"capture": {
-			"account": "camelCase",
-			"battleId": "f87cc53208934ef3",
-			"mode": "DM",
-			"theme": "SUMMER",
-			"startedAt": "2026-10-04T07:43:02.772Z",
-			"listenMs": 290000,
-			"kickPeriodMs": 300000,
-			"esportDropTiming": true,
-			"privateBattle": true,
-			"finishedAt": "2026-10-04T07:44:53.355Z",
-			"drops": 13,
-			"goldRegions": 0,
-			"elapsedMs": 108984,
-			"stopReason": "teto",
-			"capacity": 13,
-			"maxGapMs": 17002,
-			"firstDropMs": 17600,
-			"idleMs": 34364,
-			"timeline": [
-				17.6,
-				32.6,
-				34.6,
-				36.6,
-				37.6,
-				38.6,
-				42.6,
-				59.6,
-				66.6,
-				68.6,
-				69.6,
-				69.6,
-				74.6
-			]
-		},
 		"types": {
 			"medkit": 3,
-			"nitro": 2,
 			"damageup": 4,
-			"armorup": 4
+			"armorup": 4,
+			"nitro": 2
 		},
 		"points": {
 			"medkit": [
 				{
-					"x": 2895,
-					"y": 2272,
-					"z": 1845
+					"x": 2902,
+					"y": 2145,
+					"z": 1903
 				},
 				{
-					"x": -976,
-					"y": 3279,
-					"z": -128
+					"x": -1006,
+					"y": 3343,
+					"z": -131
 				},
 				{
-					"x": -6,
-					"y": -4625,
-					"z": 1277
-				}
-			],
-			"nitro": [
-				{
-					"x": 1486,
-					"y": 4207,
-					"z": 1493
-				},
-				{
-					"x": 702,
-					"y": -5739,
-					"z": 1422
+					"x": -12,
+					"y": -4359,
+					"z": 1280
 				}
 			],
 			"damageup": [
 				{
-					"x": 3603,
-					"y": -6458,
-					"z": 1477
+					"x": 3735,
+					"y": -6430,
+					"z": 1385
 				},
 				{
-					"x": -2637,
-					"y": -3183,
-					"z": 1881
+					"x": -2875,
+					"y": -3249,
+					"z": 1990
 				},
 				{
-					"x": 2956,
-					"y": 301,
-					"z": 1877
+					"x": 2760,
+					"y": 457,
+					"z": 1806
 				},
 				{
-					"x": -3270,
-					"y": 4931,
-					"z": 1307
+					"x": -3701,
+					"y": 5236,
+					"z": 1319
 				}
 			],
 			"armorup": [
 				{
-					"x": -4257,
-					"y": 1749,
-					"z": 1459
+					"x": 4296,
+					"y": 4257,
+					"z": 1252
 				},
 				{
-					"x": 4616,
-					"y": -2419,
-					"z": 1261
+					"x": -3139,
+					"y": -4755,
+					"z": 1328
 				},
 				{
-					"x": -3360,
-					"y": -4850,
-					"z": 1395
+					"x": 4534,
+					"y": -2290,
+					"z": 1424
 				},
 				{
-					"x": 4133,
-					"y": 4445,
-					"z": 1284
+					"x": -4214,
+					"y": 1987,
+					"z": 1269
+				}
+			],
+			"nitro": [
+				{
+					"x": 662,
+					"y": -5485,
+					"z": 1418
+				},
+				{
+					"x": 1685,
+					"y": 4092,
+					"z": 1440
 				}
 			]
 		},
-		"goldRegions": []
+		"goldRegions": [],
+		"capture": {
+			"account": "camelCase",
+			"battleId": "b70b3e024269eb0e",
+			"mode": "DM",
+			"theme": "SUMMER",
+			"startedAt": "2026-10-04T19:55:02.779Z",
+			"listenMs": 120000,
+			"kickPeriodMs": 300000,
+			"esportDropTiming": true,
+			"privateBattle": true,
+			"finishedAt": "2026-10-04T19:57:06.895Z",
+			"drops": 13,
+			"goldRegions": 0,
+			"elapsedMs": 120008,
+			"stopReason": "tempo",
+			"capacity": 13,
+			"maxGapMs": 19002,
+			"firstDropMs": 10900,
+			"idleMs": 42080,
+			"timeline": [
+				10.9,
+				11.9,
+				22.9,
+				29.9,
+				33.9,
+				38.9,
+				47.9,
+				48.9,
+				49.9,
+				50.9,
+				54.9,
+				73.9,
+				77.9
+			]
+		}
 	},
-	"updatedAt": "2026-10-04T15:23:21.177Z"
+	"updatedAt": "2026-10-04T21:54:53.814Z"
 }

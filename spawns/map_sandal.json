@@ -2,93 +2,93 @@
 	"mapId": "map_sandal",
 	"modes": {},
 	"bonus": {
-		"capture": {
-			"account": "camelCase",
-			"battleId": "66ea2a29178c6741",
-			"mode": "DM",
-			"theme": "SUMMER",
-			"startedAt": "2026-10-04T08:11:56.008Z",
-			"listenMs": 290000,
-			"kickPeriodMs": 300000,
-			"esportDropTiming": true,
-			"privateBattle": true,
-			"finishedAt": "2026-10-04T08:13:35.791Z",
-			"drops": 8,
-			"goldRegions": 0,
-			"elapsedMs": 97958,
-			"stopReason": "teto",
-			"capacity": 8,
-			"maxGapMs": 12000,
-			"firstDropMs": 38100,
-			"idleMs": 24837,
-			"timeline": [
-				38.1,
-				39.1,
-				49.1,
-				61.1,
-				63.1,
-				68.1,
-				72.1,
-				73.1
-			]
-		},
 		"types": {
 			"damageup": 2,
-			"medkit": 2,
 			"armorup": 2,
-			"nitro": 2
+			"nitro": 2,
+			"medkit": 2
 		},
 		"points": {
 			"damageup": [
 				{
-					"x": -3181,
-					"y": 2138,
-					"z": 1396
+					"x": -3345,
+					"y": 2334,
+					"z": 1361
 				},
 				{
-					"x": 3371,
-					"y": -4211,
-					"z": 1419
-				}
-			],
-			"medkit": [
-				{
-					"x": 1717,
-					"y": -4924,
-					"z": 1895
-				},
-				{
-					"x": -1218,
-					"y": 260,
-					"z": 1219
+					"x": 3258,
+					"y": -4204,
+					"z": 1350
 				}
 			],
 			"armorup": [
 				{
-					"x": 2318,
-					"y": 3139,
-					"z": 1386
+					"x": -1811,
+					"y": -4778,
+					"z": 1432
 				},
 				{
-					"x": -1857,
-					"y": -4669,
-					"z": 1361
+					"x": 2306,
+					"y": 3283,
+					"z": 1433
 				}
 			],
 			"nitro": [
 				{
-					"x": -95,
-					"y": -6622,
-					"z": 909
+					"x": 43,
+					"y": -6559,
+					"z": 1020
 				},
 				{
-					"x": 71,
-					"y": 4553,
-					"z": 995
+					"x": 85,
+					"y": 4558,
+					"z": 1136
+				}
+			],
+			"medkit": [
+				{
+					"x": -1308,
+					"y": 145,
+					"z": 1211
+				},
+				{
+					"x": 1697,
+					"y": -4901,
+					"z": 2083
 				}
 			]
 		},
-		"goldRegions": []
+		"goldRegions": [],
+		"capture": {
+			"account": "camelCase",
+			"battleId": "a5f9749b76ee33a2",
+			"mode": "DM",
+			"theme": "SUMMER",
+			"startedAt": "2026-10-04T20:23:42.314Z",
+			"listenMs": 120000,
+			"kickPeriodMs": 300000,
+			"esportDropTiming": true,
+			"privateBattle": true,
+			"finishedAt": "2026-10-04T20:25:46.692Z",
+			"drops": 8,
+			"goldRegions": 0,
+			"elapsedMs": 120006,
+			"stopReason": "tempo",
+			"capacity": 8,
+			"maxGapMs": 13000,
+			"firstDropMs": 13300,
+			"idleMs": 54735,
+			"timeline": [
+				13.3,
+				14.3,
+				25.3,
+				29.3,
+				42.3,
+				55.3,
+				60.3,
+				65.3
+			]
+		}
 	},
-	"updatedAt": "2026-10-04T15:23:21.187Z"
+	"updatedAt": "2026-10-04T21:54:53.824Z"
 }
