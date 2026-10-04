@@ -1,0 +1,318 @@
+{
+	"mapId": "map_desert",
+	"modes": {},
+	"bonus": {
+		"types": {
+			"damageup": 3,
+			"armorup": 3,
+			"nitro": 4,
+			"medkit": 2
+		},
+		"region": {
+			"damageup": {
+				"minX": -3884,
+				"maxX": 5867,
+				"minY": 728,
+				"maxY": 9058,
+				"minZ": 1340,
+				"maxZ": 1459
+			},
+			"armorup": {
+				"minX": -3758,
+				"maxX": 5129,
+				"minY": -3110,
+				"maxY": 6265,
+				"minZ": 1212,
+				"maxZ": 1456
+			},
+			"nitro": {
+				"minX": -9998,
+				"maxX": 7676,
+				"minY": -3858,
+				"maxY": 9051,
+				"minZ": 1280,
+				"maxZ": 1447
+			},
+			"medkit": {
+				"minX": -2600,
+				"maxX": 4609,
+				"minY": -4221,
+				"maxY": -3977,
+				"minZ": 1265,
+				"maxZ": 1276
+			}
+		},
+		"zones": {
+			"damageup": [
+				{
+					"minX": -3884,
+					"maxX": -3884,
+					"minY": 728,
+					"maxY": 728,
+					"minZ": 1459,
+					"maxZ": 1459,
+					"samples": 1,
+					"cx": -3884,
+					"cy": 728,
+					"cz": 1459
+				},
+				{
+					"minX": 5867,
+					"maxX": 5867,
+					"minY": 2107,
+					"maxY": 2107,
+					"minZ": 1371,
+					"maxZ": 1371,
+					"samples": 1,
+					"cx": 5867,
+					"cy": 2107,
+					"cz": 1371
+				},
+				{
+					"minX": 2003,
+					"maxX": 2003,
+					"minY": 9058,
+					"maxY": 9058,
+					"minZ": 1340,
+					"maxZ": 1340,
+					"samples": 1,
+					"cx": 2003,
+					"cy": 9058,
+					"cz": 1340
+				}
+			],
+			"armorup": [
+				{
+					"minX": 5129,
+					"maxX": 5129,
+					"minY": 6265,
+					"maxY": 6265,
+					"minZ": 1212,
+					"maxZ": 1212,
+					"samples": 1,
+					"cx": 5129,
+					"cy": 6265,
+					"cz": 1212
+				},
+				{
+					"minX": 856,
+					"maxX": 856,
+					"minY": -3110,
+					"maxY": -3110,
+					"minZ": 1401,
+					"maxZ": 1401,
+					"samples": 1,
+					"cx": 856,
+					"cy": -3110,
+					"cz": 1401
+				},
+				{
+					"minX": -3758,
+					"maxX": -3758,
+					"minY": 5861,
+					"maxY": 5861,
+					"minZ": 1456,
+					"maxZ": 1456,
+					"samples": 1,
+					"cx": -3758,
+					"cy": 5861,
+					"cz": 1456
+				}
+			],
+			"nitro": [
+				{
+					"minX": 7004,
+					"maxX": 7004,
+					"minY": 8841,
+					"maxY": 8841,
+					"minZ": 1341,
+					"maxZ": 1341,
+					"samples": 1,
+					"cx": 7004,
+					"cy": 8841,
+					"cz": 1341
+				},
+				{
+					"minX": 7676,
+					"maxX": 7676,
+					"minY": -3774,
+					"maxY": -3774,
+					"minZ": 1447,
+					"maxZ": 1447,
+					"samples": 1,
+					"cx": 7676,
+					"cy": -3774,
+					"cz": 1447
+				},
+				{
+					"minX": -9506,
+					"maxX": -9506,
+					"minY": -3858,
+					"maxY": -3858,
+					"minZ": 1280,
+					"maxZ": 1280,
+					"samples": 1,
+					"cx": -9506,
+					"cy": -3858,
+					"cz": 1280
+				},
+				{
+					"minX": -9998,
+					"maxX": -9998,
+					"minY": 9051,
+					"maxY": 9051,
+					"minZ": 1329,
+					"maxZ": 1329,
+					"samples": 1,
+					"cx": -9998,
+					"cy": 9051,
+					"cz": 1329
+				}
+			],
+			"medkit": [
+				{
+					"minX": -2600,
+					"maxX": -2600,
+					"minY": -3977,
+					"maxY": -3977,
+					"minZ": 1265,
+					"maxZ": 1265,
+					"samples": 1,
+					"cx": -2600,
+					"cy": -3977,
+					"cz": 1265
+				},
+				{
+					"minX": 4609,
+					"maxX": 4609,
+					"minY": -4221,
+					"maxY": -4221,
+					"minZ": 1276,
+					"maxZ": 1276,
+					"samples": 1,
+					"cx": 4609,
+					"cy": -4221,
+					"cz": 1276
+				}
+			]
+		},
+		"drops": {
+			"damageup": [
+				{
+					"x": -3884,
+					"y": 728,
+					"z": 1459,
+					"count": 1
+				},
+				{
+					"x": 5867,
+					"y": 2107,
+					"z": 1371,
+					"count": 1
+				},
+				{
+					"x": 2003,
+					"y": 9058,
+					"z": 1340,
+					"count": 1
+				}
+			],
+			"armorup": [
+				{
+					"x": 5129,
+					"y": 6265,
+					"z": 1212,
+					"count": 1
+				},
+				{
+					"x": 856,
+					"y": -3110,
+					"z": 1401,
+					"count": 1
+				},
+				{
+					"x": -3758,
+					"y": 5861,
+					"z": 1456,
+					"count": 1
+				}
+			],
+			"nitro": [
+				{
+					"x": 7004,
+					"y": 8841,
+					"z": 1341,
+					"count": 1
+				},
+				{
+					"x": 7676,
+					"y": -3774,
+					"z": 1447,
+					"count": 1
+				},
+				{
+					"x": -9506,
+					"y": -3858,
+					"z": 1280,
+					"count": 1
+				},
+				{
+					"x": -9998,
+					"y": 9051,
+					"z": 1329,
+					"count": 1
+				}
+			],
+			"medkit": [
+				{
+					"x": -2600,
+					"y": -3977,
+					"z": 1265,
+					"count": 1
+				},
+				{
+					"x": 4609,
+					"y": -4221,
+					"z": 1276,
+					"count": 1
+				}
+			]
+		},
+		"goldRegions": [],
+		"capture": {
+			"account": "Danlino",
+			"battleId": "1e5108e4f88ecdad",
+			"mode": "DM",
+			"theme": "SUMMER",
+			"startedAt": "2026-10-04T09:26:24.622Z",
+			"listenMs": 290000,
+			"kickPeriodMs": 300000,
+			"esportDropTiming": true,
+			"privateBattle": true,
+			"finishedAt": "2026-10-04T09:28:00.882Z",
+			"drops": 12,
+			"goldRegions": 0,
+			"elapsedMs": 90787,
+			"stopReason": "teto",
+			"capacity": 12,
+			"maxGapMs": 10034,
+			"firstDropMs": 23900,
+			"idleMs": 20848,
+			"timeline": [
+				23.9,
+				26,
+				26,
+				27.9,
+				31.9,
+				39.9,
+				50,
+				56.9,
+				58.9,
+				60.9,
+				61.9,
+				69.9
+			]
+		}
+	},
+	"updatedAt": "2026-10-04T09:28:00.882Z"
+}

@@ -1,0 +1,121 @@
+{
+	"mapId": "map_silence_moon",
+	"modes": {},
+	"bonus": {
+		"types": {
+			"nitro": 1,
+			"armorup": 2
+		},
+		"region": {
+			"nitro": {
+				"minX": -1379,
+				"maxX": -1379,
+				"minY": -8071,
+				"maxY": -8071,
+				"minZ": 3573,
+				"maxZ": 3573
+			},
+			"armorup": {
+				"minX": -2364,
+				"maxX": -2028,
+				"minY": -7768,
+				"maxY": -4722,
+				"minZ": 3498,
+				"maxZ": 3550
+			}
+		},
+		"zones": {
+			"nitro": [
+				{
+					"minX": -1379,
+					"maxX": -1379,
+					"minY": -8071,
+					"maxY": -8071,
+					"minZ": 3573,
+					"maxZ": 3573,
+					"samples": 1,
+					"cx": -1379,
+					"cy": -8071,
+					"cz": 3573
+				}
+			],
+			"armorup": [
+				{
+					"minX": -2364,
+					"maxX": -2364,
+					"minY": -4722,
+					"maxY": -4722,
+					"minZ": 3550,
+					"maxZ": 3550,
+					"samples": 1,
+					"cx": -2364,
+					"cy": -4722,
+					"cz": 3550
+				},
+				{
+					"minX": -2028,
+					"maxX": -2028,
+					"minY": -7768,
+					"maxY": -7768,
+					"minZ": 3498,
+					"maxZ": 3498,
+					"samples": 1,
+					"cx": -2028,
+					"cy": -7768,
+					"cz": 3498
+				}
+			]
+		},
+		"drops": {
+			"nitro": [
+				{
+					"x": -1379,
+					"y": -8071,
+					"z": 3573,
+					"count": 1
+				}
+			],
+			"armorup": [
+				{
+					"x": -2364,
+					"y": -4722,
+					"z": 3550,
+					"count": 1
+				},
+				{
+					"x": -2028,
+					"y": -7768,
+					"z": 3498,
+					"count": 1
+				}
+			]
+		},
+		"goldRegions": [],
+		"capture": {
+			"account": "Danlino",
+			"battleId": "dd7d37f847507ca8",
+			"mode": "DM",
+			"theme": "SPACE",
+			"startedAt": "2026-10-04T09:44:36.915Z",
+			"listenMs": 290000,
+			"kickPeriodMs": 300000,
+			"esportDropTiming": true,
+			"privateBattle": true,
+			"finishedAt": "2026-10-04T09:45:20.985Z",
+			"drops": 3,
+			"goldRegions": 0,
+			"elapsedMs": 42268,
+			"stopReason": "teto",
+			"capacity": 3,
+			"maxGapMs": 5996,
+			"firstDropMs": 14300,
+			"idleMs": 20984,
+			"timeline": [
+				14.3,
+				20.3,
+				21.3
+			]
+		}
+	},
+	"updatedAt": "2026-10-04T09:45:20.985Z"
+}

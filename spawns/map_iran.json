@@ -1,0 +1,337 @@
+{
+	"mapId": "map_iran",
+	"modes": {},
+	"bonus": {
+		"types": {
+			"medkit": 3,
+			"nitro": 2,
+			"damageup": 4,
+			"armorup": 4
+		},
+		"region": {
+			"medkit": {
+				"minX": -976,
+				"maxX": 2895,
+				"minY": -4625,
+				"maxY": 3279,
+				"minZ": -128,
+				"maxZ": 1845
+			},
+			"nitro": {
+				"minX": 702,
+				"maxX": 1486,
+				"minY": -5739,
+				"maxY": 4207,
+				"minZ": 1422,
+				"maxZ": 1493
+			},
+			"damageup": {
+				"minX": -3270,
+				"maxX": 3603,
+				"minY": -6458,
+				"maxY": 4931,
+				"minZ": 1307,
+				"maxZ": 1881
+			},
+			"armorup": {
+				"minX": -4257,
+				"maxX": 4616,
+				"minY": -4850,
+				"maxY": 4445,
+				"minZ": 1261,
+				"maxZ": 1459
+			}
+		},
+		"zones": {
+			"medkit": [
+				{
+					"minX": 2895,
+					"maxX": 2895,
+					"minY": 2272,
+					"maxY": 2272,
+					"minZ": 1845,
+					"maxZ": 1845,
+					"samples": 1,
+					"cx": 2895,
+					"cy": 2272,
+					"cz": 1845
+				},
+				{
+					"minX": -976,
+					"maxX": -976,
+					"minY": 3279,
+					"maxY": 3279,
+					"minZ": -128,
+					"maxZ": -128,
+					"samples": 1,
+					"cx": -976,
+					"cy": 3279,
+					"cz": -128
+				},
+				{
+					"minX": -6,
+					"maxX": -6,
+					"minY": -4625,
+					"maxY": -4625,
+					"minZ": 1277,
+					"maxZ": 1277,
+					"samples": 1,
+					"cx": -6,
+					"cy": -4625,
+					"cz": 1277
+				}
+			],
+			"nitro": [
+				{
+					"minX": 1486,
+					"maxX": 1486,
+					"minY": 4207,
+					"maxY": 4207,
+					"minZ": 1493,
+					"maxZ": 1493,
+					"samples": 1,
+					"cx": 1486,
+					"cy": 4207,
+					"cz": 1493
+				},
+				{
+					"minX": 702,
+					"maxX": 702,
+					"minY": -5739,
+					"maxY": -5739,
+					"minZ": 1422,
+					"maxZ": 1422,
+					"samples": 1,
+					"cx": 702,
+					"cy": -5739,
+					"cz": 1422
+				}
+			],
+			"damageup": [
+				{
+					"minX": 3603,
+					"maxX": 3603,
+					"minY": -6458,
+					"maxY": -6458,
+					"minZ": 1477,
+					"maxZ": 1477,
+					"samples": 1,
+					"cx": 3603,
+					"cy": -6458,
+					"cz": 1477
+				},
+				{
+					"minX": -2637,
+					"maxX": -2637,
+					"minY": -3183,
+					"maxY": -3183,
+					"minZ": 1881,
+					"maxZ": 1881,
+					"samples": 1,
+					"cx": -2637,
+					"cy": -3183,
+					"cz": 1881
+				},
+				{
+					"minX": 2956,
+					"maxX": 2956,
+					"minY": 301,
+					"maxY": 301,
+					"minZ": 1877,
+					"maxZ": 1877,
+					"samples": 1,
+					"cx": 2956,
+					"cy": 301,
+					"cz": 1877
+				},
+				{
+					"minX": -3270,
+					"maxX": -3270,
+					"minY": 4931,
+					"maxY": 4931,
+					"minZ": 1307,
+					"maxZ": 1307,
+					"samples": 1,
+					"cx": -3270,
+					"cy": 4931,
+					"cz": 1307
+				}
+			],
+			"armorup": [
+				{
+					"minX": -4257,
+					"maxX": -4257,
+					"minY": 1749,
+					"maxY": 1749,
+					"minZ": 1459,
+					"maxZ": 1459,
+					"samples": 1,
+					"cx": -4257,
+					"cy": 1749,
+					"cz": 1459
+				},
+				{
+					"minX": 4616,
+					"maxX": 4616,
+					"minY": -2419,
+					"maxY": -2419,
+					"minZ": 1261,
+					"maxZ": 1261,
+					"samples": 1,
+					"cx": 4616,
+					"cy": -2419,
+					"cz": 1261
+				},
+				{
+					"minX": -3360,
+					"maxX": -3360,
+					"minY": -4850,
+					"maxY": -4850,
+					"minZ": 1395,
+					"maxZ": 1395,
+					"samples": 1,
+					"cx": -3360,
+					"cy": -4850,
+					"cz": 1395
+				},
+				{
+					"minX": 4133,
+					"maxX": 4133,
+					"minY": 4445,
+					"maxY": 4445,
+					"minZ": 1284,
+					"maxZ": 1284,
+					"samples": 1,
+					"cx": 4133,
+					"cy": 4445,
+					"cz": 1284
+				}
+			]
+		},
+		"drops": {
+			"medkit": [
+				{
+					"x": 2895,
+					"y": 2272,
+					"z": 1845,
+					"count": 1
+				},
+				{
+					"x": -976,
+					"y": 3279,
+					"z": -128,
+					"count": 1
+				},
+				{
+					"x": -6,
+					"y": -4625,
+					"z": 1277,
+					"count": 1
+				}
+			],
+			"nitro": [
+				{
+					"x": 1486,
+					"y": 4207,
+					"z": 1493,
+					"count": 1
+				},
+				{
+					"x": 702,
+					"y": -5739,
+					"z": 1422,
+					"count": 1
+				}
+			],
+			"damageup": [
+				{
+					"x": 3603,
+					"y": -6458,
+					"z": 1477,
+					"count": 1
+				},
+				{
+					"x": -2637,
+					"y": -3183,
+					"z": 1881,
+					"count": 1
+				},
+				{
+					"x": 2956,
+					"y": 301,
+					"z": 1877,
+					"count": 1
+				},
+				{
+					"x": -3270,
+					"y": 4931,
+					"z": 1307,
+					"count": 1
+				}
+			],
+			"armorup": [
+				{
+					"x": -4257,
+					"y": 1749,
+					"z": 1459,
+					"count": 1
+				},
+				{
+					"x": 4616,
+					"y": -2419,
+					"z": 1261,
+					"count": 1
+				},
+				{
+					"x": -3360,
+					"y": -4850,
+					"z": 1395,
+					"count": 1
+				},
+				{
+					"x": 4133,
+					"y": 4445,
+					"z": 1284,
+					"count": 1
+				}
+			]
+		},
+		"goldRegions": [],
+		"capture": {
+			"account": "camelCase",
+			"battleId": "f87cc53208934ef3",
+			"mode": "DM",
+			"theme": "SUMMER",
+			"startedAt": "2026-10-04T07:43:02.772Z",
+			"listenMs": 290000,
+			"kickPeriodMs": 300000,
+			"esportDropTiming": true,
+			"privateBattle": true,
+			"finishedAt": "2026-10-04T07:44:53.355Z",
+			"drops": 13,
+			"goldRegions": 0,
+			"elapsedMs": 108984,
+			"stopReason": "teto",
+			"capacity": 13,
+			"maxGapMs": 17002,
+			"firstDropMs": 17600,
+			"idleMs": 34364,
+			"timeline": [
+				17.6,
+				32.6,
+				34.6,
+				36.6,
+				37.6,
+				38.6,
+				42.6,
+				59.6,
+				66.6,
+				68.6,
+				69.6,
+				69.6,
+				74.6
+			]
+		}
+	},
+	"updatedAt": "2026-10-04T07:44:53.355Z"
+}

@@ -1,0 +1,261 @@
+{
+	"mapId": "map_combe",
+	"modes": {},
+	"bonus": {
+		"types": {
+			"armorup": 2,
+			"nitro": 4,
+			"damageup": 2,
+			"medkit": 1
+		},
+		"region": {
+			"armorup": {
+				"minX": -2212,
+				"maxX": 2846,
+				"minY": -7210,
+				"maxY": -3761,
+				"minZ": 1875,
+				"maxZ": 1919
+			},
+			"nitro": {
+				"minX": -2582,
+				"maxX": 2679,
+				"minY": -6952,
+				"maxY": -3870,
+				"minZ": 1889,
+				"maxZ": 2086
+			},
+			"damageup": {
+				"minX": -2037,
+				"maxX": 2616,
+				"minY": -5986,
+				"maxY": -4824,
+				"minZ": 1922,
+				"maxZ": 2053
+			},
+			"medkit": {
+				"minX": 251,
+				"maxX": 251,
+				"minY": -5625,
+				"maxY": -5625,
+				"minZ": 802,
+				"maxZ": 802
+			}
+		},
+		"zones": {
+			"armorup": [
+				{
+					"minX": 2846,
+					"maxX": 2846,
+					"minY": -3761,
+					"maxY": -3761,
+					"minZ": 1875,
+					"maxZ": 1875,
+					"samples": 1,
+					"cx": 2846,
+					"cy": -3761,
+					"cz": 1875
+				},
+				{
+					"minX": -2212,
+					"maxX": -2212,
+					"minY": -7210,
+					"maxY": -7210,
+					"minZ": 1919,
+					"maxZ": 1919,
+					"samples": 1,
+					"cx": -2212,
+					"cy": -7210,
+					"cz": 1919
+				}
+			],
+			"nitro": [
+				{
+					"minX": 2375,
+					"maxX": 2375,
+					"minY": -6171,
+					"maxY": -6171,
+					"minZ": 1889,
+					"maxZ": 1889,
+					"samples": 1,
+					"cx": 2375,
+					"cy": -6171,
+					"cz": 1889
+				},
+				{
+					"minX": -2065,
+					"maxX": -2065,
+					"minY": -6952,
+					"maxY": -6952,
+					"minZ": 2086,
+					"maxZ": 2086,
+					"samples": 1,
+					"cx": -2065,
+					"cy": -6952,
+					"cz": 2086
+				},
+				{
+					"minX": 2679,
+					"maxX": 2679,
+					"minY": -3870,
+					"maxY": -3870,
+					"minZ": 2010,
+					"maxZ": 2010,
+					"samples": 1,
+					"cx": 2679,
+					"cy": -3870,
+					"cz": 2010
+				},
+				{
+					"minX": -2582,
+					"maxX": -2582,
+					"minY": -5326,
+					"maxY": -5326,
+					"minZ": 1992,
+					"maxZ": 1992,
+					"samples": 1,
+					"cx": -2582,
+					"cy": -5326,
+					"cz": 1992
+				}
+			],
+			"damageup": [
+				{
+					"minX": 2616,
+					"maxX": 2616,
+					"minY": -5986,
+					"maxY": -5986,
+					"minZ": 1922,
+					"maxZ": 1922,
+					"samples": 1,
+					"cx": 2616,
+					"cy": -5986,
+					"cz": 1922
+				},
+				{
+					"minX": -2037,
+					"maxX": -2037,
+					"minY": -4824,
+					"maxY": -4824,
+					"minZ": 2053,
+					"maxZ": 2053,
+					"samples": 1,
+					"cx": -2037,
+					"cy": -4824,
+					"cz": 2053
+				}
+			],
+			"medkit": [
+				{
+					"minX": 251,
+					"maxX": 251,
+					"minY": -5625,
+					"maxY": -5625,
+					"minZ": 802,
+					"maxZ": 802,
+					"samples": 1,
+					"cx": 251,
+					"cy": -5625,
+					"cz": 802
+				}
+			]
+		},
+		"drops": {
+			"armorup": [
+				{
+					"x": 2846,
+					"y": -3761,
+					"z": 1875,
+					"count": 1
+				},
+				{
+					"x": -2212,
+					"y": -7210,
+					"z": 1919,
+					"count": 1
+				}
+			],
+			"nitro": [
+				{
+					"x": 2375,
+					"y": -6171,
+					"z": 1889,
+					"count": 1
+				},
+				{
+					"x": -2065,
+					"y": -6952,
+					"z": 2086,
+					"count": 1
+				},
+				{
+					"x": 2679,
+					"y": -3870,
+					"z": 2010,
+					"count": 1
+				},
+				{
+					"x": -2582,
+					"y": -5326,
+					"z": 1992,
+					"count": 1
+				}
+			],
+			"damageup": [
+				{
+					"x": 2616,
+					"y": -5986,
+					"z": 1922,
+					"count": 1
+				},
+				{
+					"x": -2037,
+					"y": -4824,
+					"z": 2053,
+					"count": 1
+				}
+			],
+			"medkit": [
+				{
+					"x": 251,
+					"y": -5625,
+					"z": 802,
+					"count": 1
+				}
+			]
+		},
+		"goldRegions": [],
+		"capture": {
+			"account": "Danlino",
+			"battleId": "966add14f542ce71",
+			"mode": "DM",
+			"theme": "SUMMER",
+			"startedAt": "2026-10-04T06:47:25.219Z",
+			"listenMs": 290000,
+			"kickPeriodMs": 300000,
+			"esportDropTiming": true,
+			"privateBattle": true,
+			"finishedAt": "2026-10-04T06:49:16.888Z",
+			"drops": 9,
+			"goldRegions": 0,
+			"elapsedMs": 109977,
+			"stopReason": "teto",
+			"capacity": 9,
+			"maxGapMs": 14997,
+			"firstDropMs": 14100,
+			"idleMs": 30912,
+			"timeline": [
+				14.1,
+				21.1,
+				33.1,
+				36.1,
+				50.1,
+				55.1,
+				56.1,
+				71.1,
+				79.1
+			]
+		}
+	},
+	"updatedAt": "2026-10-04T06:49:16.888Z"
+}
